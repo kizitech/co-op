@@ -1,0 +1,464 @@
+/* GOOGLE POPPINS FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap');
+
+/* CODE FROM UNIFORM CSS TO RESET BROWSER STYLES */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0 solid transparent;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Prevent iOS font size change */
+html {
+    -webkit-text-size-adjust: 100%;
+}
+
+/* reset body line-height */
+body {
+    line-height: 1;
+    min-height: 100vh;
+    background: white;
+    text-rendering: optimizeSpeed;
+}
+
+/* all media elements set to block and full width */
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+    display: block;
+    max-width: 100%;
+}
+
+/* inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+    line-height: inherit;
+    color: inherit;
+}
+
+/* collapse table */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* assign button hover state */
+button,
+[role="button"] {
+    cursor: pointer;
+    background-color: transparent;
+    -webkit-tap-highlight-color: transparent;
+
+    &:focus {
+        outline: 0;
+    }
+}
+
+/* reset anchor style */
+a {
+    cursor: pointer;
+    color: inherit;
+    text-decoration: inherit;
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* reset heading style */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+/* reset list style */
+ol,
+ul {
+    list-style: none;
+}
+
+/* reset text input style */
+[type=date],
+[type=datetime],
+[type=datetime-local],
+[type=email],
+[type=month],
+[type=number],
+[type=password],
+[type=search],
+[type=tel],
+[type=text],
+[type=time],
+[type=url],
+[type=week],
+textarea,
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 100%;
+
+    &:focus {
+        outline: 0;
+    }
+}
+
+/* reset firefox placeholder opacity */
+::-moz-placeholder {
+    opacity: 1;
+}
+
+/* reset textarea style */
+textarea {
+    /* move the label to the top */
+    vertical-align: top;
+
+   /* turn off scroll bars in IE unless needed */
+    overflow: auto;
+}
+
+/* reset checkbox and radio style */
+[type='checkbox'],
+[type='radio'] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    &:focus {
+        outline: 0
+    }
+}
+
+/* remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+
+/* NAVIGATION BAR */
+.header__nav-list {
+    width: 100%;
+    height: 4em;
+    display: grid;
+    align-items: center;
+    background: #9E9628;
+    justify-content: center;
+    /* box-shadow: 0px 0px 20px 20px black; */
+    grid-template-columns: 1fr 1fr 1fr 2fr 1fr 1fr 1fr;
+}
+
+.header__nav-link {
+    transition: all 500ms ease;
+}
+
+.header__nav-link:hover {
+    text-decoration: underline;
+}
+
+.header__nav-link:nth-child(4):hover {
+    text-decoration: none;
+}
+
+.header__nav-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header__nav-logo {
+    font-size: 2.5rem;   
+    font-weight: 900;
+    font-family: 'Dela Gothic One', cursive;
+}
+
+
+/* HERO PAGE */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)), url(images/coop_hero_image.jpg);
+}
+
+.hero form {
+    padding: 5em;
+    border: 1px solid #c8ccd4;
+}
+
+/* CHECKBOX STYLES */
+.cbx {
+    position: relative;
+    top: 1px;
+    width: 27px;
+    height: 27px;
+    border: 1px solid #c8ccd4;
+    border-radius: 3px;
+    transition: background 0.1s ease;
+    cursor: pointer;
+    display: block;
+}
+
+.cbx:after {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 8px;
+    width: 7px;
+    height: 14px;
+    opacity: 0;
+    transform: rotate(45deg) scale(0);
+    border-right: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    transition: all 0.3s ease;
+    transition-delay: 0.15s;
+}
+
+.cbxx {
+    position: relative;
+    top: 1px;
+    width: 27px;
+    height: 27px;
+    border: 1px solid #c8ccd4;
+    border-radius: 3px;
+    transition: background 0.1s ease;
+    cursor: pointer;
+    display: block;
+}
+
+.cbxx:after {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 8px;
+    width: 7px;
+    height: 14px;
+    opacity: 0;
+    transform: rotate(45deg) scale(0);
+    border-right: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    transition: all 0.3s ease;
+    transition-delay: 0.15s;
+}
+
+.lbl {
+    margin-left: 5px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+#cbx:checked~.cbx {
+    border-color: transparent;
+    background: #9E9628;
+    animation: jelly 0.6s ease;
+}
+
+#cbx:checked~.cbx:after {
+    opacity: 1;
+    transform: rotate(45deg) scale(1);
+}
+
+#cbxx:checked~.cbxx {
+    border-color: transparent;
+    background: #9E9628;
+    animation: jelly 0.6s ease;
+}
+
+#cbxx:checked~.cbxx:after {
+    opacity: 1;
+    transform: rotate(45deg) scale(1);
+}
+
+.cntr {
+    margin: 1.5em;
+    display: flex;
+    position: relative;
+    align-items: center;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+}
+
+.cntr span {
+    color: #fff;
+    font-size: 1.25rem;
+    padding-right: 1em;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+}
+
+@keyframes jelly {
+    from {
+        transform: scale(1, 1);
+    }
+
+    30% {
+        transform: scale(1.25, 0.75);
+    }
+
+    40% {
+        transform: scale(0.75, 1.25);
+    }
+
+    50% {
+        transform: scale(1.15, 0.85);
+    }
+
+    65% {
+        transform: scale(0.95, 1.05);
+    }
+
+    75% {
+        transform: scale(1.05, 0.95);
+    }
+
+    to {
+        transform: scale(1, 1);
+    }
+}
+
+.hidden-xs-up {
+    display: none !important;
+}
+
+
+
+/* INPUT FIELD STYLES */
+.form__group {
+    width: 100%;
+    position: relative;
+    padding: 20px 0 0;
+    max-width: 30em;
+    margin-top: 5em;
+}
+
+.form__field {
+    width: 100%;
+    border: none;
+    font-family: inherit;
+    border-bottom: 2px solid #9b9b9b;
+    outline: 0;
+    font-size: 1rem;
+    color: #fff;
+    padding: 7px 0;
+    background: transparent;
+    transition: border-color 0.2s;
+}
+
+.form__field::placeholder {
+    color: transparent;
+}
+
+.form__field:placeholder-shown~.form__label {
+    font-size: 1rem;
+    cursor: text;
+    top: 20px;
+}
+
+.form__label {
+    top: 0;
+    position: absolute;
+    display: block;
+    transition: 0.2s;
+    font-size: 1rem;
+    color: #9b9b9b;
+    pointer-events: none;
+    text-transform: uppercase;
+}
+
+.form__field:focus {
+    padding: 6px;
+    font-weight: 400;
+    border: 2px solid #9E9628;
+}
+
+.form__field:focus~.form__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 1rem;
+    color: #fff;
+    font-weight: 700;
+}
+
+/* reset input */
+.form__field:required,
+.form__field:invalid {
+    box-shadow: none;
+}
+
+
+
+/* FORM SUBMIT BUTTON STYLES */
+.form__submit {
+    margin: 2em 0 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.form__submit button {
+    font-size: 17px;
+    padding: 0.5em 2em;
+    border: transparent;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    background: #9E9628;
+    color: white;
+    border-radius: 4px;
+}
+
+.form__submit button:hover {
+    background: rgb(2, 0, 36);
+    /* background: linear-gradient(90deg, rgba(30, 144, 255, 1) 0%, rgba(0, 212, 255, 1) 100%); */
+}
+
+.form__submit button:active {
+    transform: translate(0em, 0.2em);
+}
+
+
+
+/* USER PROFILE */
+.user-profile__info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.user-profile__photo-image {
+    width: 10em;
+    height: 10em;
+    object-fit: cover;
+}

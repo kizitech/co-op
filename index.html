@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CO-OP</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="wrapper-div">
+        <header class="header">
+            <nav class="header__nav">
+                <ul class="header__nav-list">
+                    <li class="header__nav-item"><a href="#" class="header__nav-link">Home</a></li>
+                    <li class="header__nav-item"><a href="#" class="header__nav-link">About</a></li>
+                    <li class="header__nav-item"><a href="#" class="header__nav-link">Admistration</a></li>
+                    <li class="header__nav-item"><a href="#" class="header__nav-link"><span
+                                class="header__nav-logo">CO-OP</span></a></li>
+                    <li class="header__nav-item"><a href="#" class="header__nav-link">Journals</a></li>
+                    <li class="header__nav-item"><a href="#" class="header__nav-link">Report</a></li>
+                    <li class="header__nav-item"><a href="#" class="header__nav-link">News</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section class="hero">
+                <form action="" method="post">
+                    <div class="cntr">
+                        <input type="checkbox" id="cbx" class="hidden-xs-up">
+                        <label for="cbx" class="cbx"></label>
+                        <span>new member</span>
+                    </div>
+                    <div class="cntr">
+                        <input type="checkbox" id="cbxx" class="hidden-xs-up">
+                        <label for="cbxx" class="cbxx"></label>
+                        <span>old member</span>
+                    </div>
+                    <div class="form__group field">
+                        <input type="number" class="form__field" placeholder="Name" required="">
+                        <label for="name" class="form__label">membership number</label>
+                    </div>
+                    <div class="form__submit">
+                        <button type="submit">Submit</button>
+                    </div>
+                </form>
+            </section>
+        </main>
+
+<article class="user-profile">
+    <div class="user-profile__info">
+        <section class="user-profile__details">
+            <h3 class="user-profile__info-heading">Date Joined: <span class="user-profile__info-date">3rd Jul.
+                    2016</span></h3>
+            <ul class="user-profile__details-list">
+                <li class="user-profile__detail">
+                    <h2 class="user-profile__detail-heading">Number of Units Holding:</h2>
+                    <p class="user-profile__detail-value">7</p>
+                </li>
+                <li class="user-profile__detail">
+                    <h2 class="user-profile__detail-heading">Amount Paid</h2>
+                    <p class="user-profile__detail-value">₦<span class="user-profile__detail-amount">53,000</span></p>
+                </li>
+                <li class="user-profile__detail">
+                    <h2 class="user-profile__detail-heading">Monthly Saving</h2>
+                    <p class="user-profile__detail-value">₦<span class="user-profile__detail-amount">30,000</span></p>
+                </li>
+                <li class="user-profile__detail">
+                    <h2 class="user-profile__detail-heading">Retirement Date</h2>
+                    <p class="user-profile__detail-value">3rd Jul. 2024</p>
+                </li>
+            </ul>
+        </section>
+        <section class="user-profile__photo">
+            <img src="images/admin_profile_photo.jpg" alt="admin profile" class="user-profile__photo-image">
+            <div class="user-profile__photo-details">
+                <h2 class="user-profile__photo-heading">Name</h2>
+                <p class="user-profile__photo-value">Akindele Timilehin</p>
+            </div>
+        </section>
+    </div>
+</article>
+
+
+
+    </div>
+<script src="/script.js"></script>
+</body>
+</html>
