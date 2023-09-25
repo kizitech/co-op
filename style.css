@@ -165,12 +165,82 @@ textarea {
 
 
 /* NAVIGATION BAR */
+.header__nav {
+    background: #9E9628;
+}
+
+.mobile__nav-logo,
+.mobile__nav-checkbox {
+    display: none;
+}
+
+/* TOGGLE SWITCH */
+#checkbox {
+    display: none;
+}
+
+.toggle {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4em;
+    z-index: 200;
+    transition-duration: .5s;
+}
+
+.bars {
+    width: 100%;
+    height: 4px;
+    background-color: #000;
+    border-radius: 4px;
+}
+
+#bar2 {
+    transition-duration: .8s;
+}
+
+#bar1,
+#bar3 {
+    width: 70%;
+}
+
+#checkbox:checked+.toggle .bars {
+    position: absolute;
+    transition-duration: .5s;
+}
+
+#checkbox:checked+.toggle #bar2 {
+    transform: scaleX(0);
+    transition-duration: .5s;
+}
+
+#checkbox:checked+.toggle #bar1 {
+    width: 100%;
+    transform: rotate(45deg);
+    transition-duration: .5s;
+}
+
+#checkbox:checked+.toggle #bar3 {
+    width: 100%;
+    transform: rotate(-45deg);
+    transition-duration: .5s;
+}
+
+#checkbox:checked+.toggle {
+    transition-duration: .5s;
+    transform: rotate(180deg);
+}
+
 .header__nav-list {
     width: 100%;
     height: 4em;
     display: grid;
     align-items: center;
-    background: #9E9628;
     justify-content: center;
     /* box-shadow: 0px 0px 20px 20px black; */
     grid-template-columns: 1fr 1fr 1fr 2fr 1fr 1fr 1fr;
@@ -181,7 +251,7 @@ textarea {
 }
 
 .header__nav-link:hover {
-    text-decoration: underline;
+    color: #fff;
 }
 
 .header__nav-link:nth-child(4):hover {
@@ -194,7 +264,8 @@ textarea {
     justify-content: center;
 }
 
-.header__nav-logo {
+.header__nav-logo,
+.mobile__nav-logo span {
     font-size: 2.5rem;   
     font-weight: 900;
     font-family: 'Dela Gothic One', cursive;
@@ -440,7 +511,6 @@ textarea {
 
 .form__submit button:hover {
     background: rgb(2, 0, 36);
-    /* background: linear-gradient(90deg, rgba(30, 144, 255, 1) 0%, rgba(0, 212, 255, 1) 100%); */
 }
 
 .form__submit button:active {
@@ -450,15 +520,240 @@ textarea {
 
 
 /* USER PROFILE */
-.user-profile__info {
+.user-profile {
+    width: 100%;
     display: flex;
-    flex-direction: row;
     align-items: center;
     justify-content: center;
 }
 
+.user-profile__info {
+    gap: 3em;
+    width: 70%;
+    margin: 5em;
+    padding: 3.5em;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #9b9b9b;
+}
+
+.user-profile__info-heading {
+    font-size: 0.9em;
+    margin-bottom: 3em;
+}
+
+.user-profile__info-heading span {
+    color: #9E9628;
+    padding-left: 0.5em;
+}
+
+.user-profile__details-list {
+    gap: 2em;
+    display: grid;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    grid-template-columns: 1fr 1fr;
+}
+
+.user-profile__details-list h2 {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.user-profile__photo {
+    gap: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
 .user-profile__photo-image {
-    width: 10em;
-    height: 10em;
+    width: 12em;
+    height: 12em;
     object-fit: cover;
+    object-position: center;
+}
+
+.user-profile__photo-details {
+    gap: 0.5em;
+    display: flex;
+    font-size: 0.9rem;
+    align-items: center;
+}
+
+.user-profile__photo-value {
+    color: #9E9628;
+}
+
+
+
+
+/* REPORT SECTION */
+.report-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.report-section__items {
+    display: grid;
+    width: 80%;
+    align-items: center;
+    margin-bottom: 4em;
+    justify-content: center;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.report-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.report-item__button {
+    gap: 0.5em;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    border-radius: 0.5em;
+    padding: 0.5em 2.5em;
+    background: #9E9628;
+    flex-direction: column;
+    justify-content: center;
+    transition: background 250ms ease;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.report-item__button:hover {
+    box-shadow: none;
+    background: rgb(2, 0, 36);
+}
+
+.report-item__button span {
+    font-weight: 600;
+}
+
+
+
+
+
+/* FOOTER */
+.footer {
+    width: 100%;
+    display: flex;
+    padding: 2em 3em;
+    flex-direction: row;
+    background: #9E9628;
+    justify-content: space-between;
+}
+
+.social__icons {
+    gap: 0.5em;
+    display: flex;
+    align-items: center;
+}
+
+.social__icons iconify-icon {
+    cursor: pointer;
+}
+
+.copyright {
+    font-size: 0.7rem;
+}
+
+.copyright span {
+    font-family: 'Dela Gothic One', cursive;
+}
+
+@media only screen and (max-width: 40em) {
+
+    /* MOBILE NAVIGATION BAR */
+    .mobile__nav {
+        display: flex;
+        padding: 1em;
+        justify-content: space-between;
+    }
+
+    .mobile__nav-logo,
+    .mobile__nav-checkbox {
+        display: flex;
+    }
+
+    .mobile__nav-logo span {
+        font-size: 2rem;
+    }
+
+    .header__nav-item:nth-child(4) {
+        display: none;
+    }
+
+    .header__nav-link:hover {
+        color: #9E9628;
+        font-weight: 500;
+    }
+
+    .header__nav-list {
+        gap: 1em;
+        inset: 0;
+        z-index: 100;
+        display: none;
+        font-size: 1.8rem;
+        min-height: 100vh;
+        position: absolute;
+        flex-direction: column;
+        background-color: #fff;
+    }
+
+    .active .header__nav-list {
+        display: flex;
+    }
+
+
+    /* USER PROFILE */
+    .user-profile__info {
+        width: 100%;
+        margin: 0em;
+        border: none;
+        padding: 5em 2em 0;
+        flex-direction: column-reverse;
+    }
+
+    .user-profile__photo-image {
+        width: 18em;
+        height: 15em;
+    }
+
+    .user-profile__details {
+        gap: 3em;
+        display: flex;
+        margin: 1em 0 5em;
+        flex-direction: column-reverse;
+    }
+
+    .user-profile__info-heading {
+        width: 100%;
+        display: flex;
+        margin-bottom: 0;
+        justify-content: flex-end;
+    }
+
+    .user-profile__details-list h2 {
+        display: flex;
+        text-align: end;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+    .report-section__items {
+        gap: 2em;
+        grid-template-columns: 1fr;
+    }
+
+    .report-section__items button{
+        width: 70%;
+    }
 }
