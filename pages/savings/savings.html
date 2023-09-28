@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CO-OP</title>
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="/styles/tables.css">
+    <link rel="stylesheet" href="/styles/navigate.css">
+    <link rel="stylesheet" href="/pages/savings/savings.css">
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+</head>
+
+<body>
+    <div class="wrapper-div">
+        <header class="header">
+            <nav class="header__nav">
+                <div class="mobile__nav" id="toggle__btn">
+                    <a href="/index.html" class="mobile__nav-logo"><span>CO-OP</span></a>
+                    <div class="mobile__nav-checkbox">
+                        <input type="checkbox" id="checkbox">
+                        <label for="checkbox" class="toggle">
+                            <div class="bars" id="bar1"></div>
+                            <div class="bars" id="bar2"></div>
+                            <div class="bars" id="bar3"></div>
+                        </label>
+                    </div>
+                </div>
+                <ul class="header__nav-list" id="nav__list">
+                    <li class="header__nav-item"><a href="/index.html" class="header__nav-link">Home</a></li>
+                    <li class="header__nav-item"><a href="/index.html" class="header__nav-link">About</a></li>
+                    <li class="header__nav-item"><a href="/index.html" class="header__nav-link">Admistration</a></li>
+                    <li class="header__nav-item"><a href="/index.html" class="header__nav-link"><span
+                                class="header__nav-logo">CO-OP</span></a></li>
+                    <li class="header__nav-item"><a href="/index.html" class="header__nav-link">Journals</a></li>
+                    <li class="header__nav-item"><a href="/index.html" class="header__nav-link">Report</a></li>
+                    <li class="header__nav-item"><a href="/index.html" class="header__nav-link">News</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div class="navigation__arrows">
+            <div class="navigation__arrows-left" id="go-back" title="Go Back">
+                <iconify-icon class="left-arrow" icon="octicon:chevron-up-12"></iconify-icon>
+            </div>
+
+            <a href="/pages/loans/loans.html" class="navigation__arrows-right" id="go-next" title="Go Next">
+                <span class="next">Loans</span>
+                <iconify-icon class="right-arrow" icon="octicon:chevron-up-12"></iconify-icon>
+            </a>
+        </div>
+
+        <main class="report">
+
+            <table>
+                <caption>Savings: <span>David Kasse</span> </caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Date</th>
+                        <th scope="col">Particulars</th>
+                        <th scope="col">Account Type</th>
+                        <th scope="col">Dr</th>
+                        <th scope="col">Cr</th>
+                        <th scope="col">Bal</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-label="Due Date">03/01/2016</td>
+                        <td scope="row" data-label="Particulars">Cash</td>
+                        <td scope="row" data-label="Account Type">Asset</td>
+                        <td data-label="Dr">₦2,443</td>
+                        <td data-label="Cr">₦2,443</td>
+                        <td data-label="Bal">₦2,443</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Due Date">04/01/2016</td>
+                        <td scope="row" data-label="Particulars">Common Stock</td>
+                        <td scope="row" data-label="Account Type">Equity</td>
+                        <td data-label="Dr">₦1,190</td>
+                        <td data-label="Cr">₦1,190</td>
+                        <td data-label="Bal">₦1,190</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Due Date">03/01/2016</td>
+                        <td scope="row" data-label="Particulars">Payroll Payable</td>
+                        <td scope="row" data-label="Account Type">Liability</td>
+                        <td data-label="Dr">₦1,181</td>
+                        <td data-label="Cr">₦1,181</td>
+                        <td data-label="Bal">₦1,181</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Due Date">02/01/2016</td>
+                        <td scope="row" data-label="Account">Revenue</td>
+                        <td scope="row" data-label="Account Type">Revenue</td>
+                        <td data-label="Dr">₦842</td>
+                        <td data-label="Cr">₦842</td>
+                        <td data-label="Bal">₦842</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Due Date">02/01/2016</td>
+                        <td scope="row" data-label="Account">Utilities</td>
+                        <td scope="row" data-label="Account Type">Expense</td>
+                        <td data-label="Dr">₦842</td>
+                        <td data-label="Cr">₦842</td>
+                        <td data-label="Bal">₦842</td>
+                    </tr>
+                </tbody>
+            </table>
+        </main>
+
+
+        <footer class="footer">
+            <div class="social__icons">
+                <a href="/index.html" title="Twitter"><iconify-icon icon="mingcute:social-x-line"></iconify-icon></a>
+                <a href="/index.html" title="Telegram"></a><iconify-icon icon="basil:telegram-solid"></iconify-icon></a>
+                <a href="/index.html" title="Linkedin"></a><iconify-icon icon="ri:linkedin-fill"></iconify-icon></a>
+                <a href="/index.html" title="Facebook"></a><iconify-icon icon="gg:facebook"></iconify-icon></a>
+            </div>
+            <p class="copyright">© 2023 <span>CO-OP</span> All rights reserved.</p>
+        </footer>
+    </div>
+    <script src="/scripts/navigate.js"></script>
+    <script src="/scripts/script.js"></script>
+</body>
+
+</html>

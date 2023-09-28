@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CO-OP</title>
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="/styles/tables.css">
+    <link rel="stylesheet" href="/styles/navigate.css">
+    <link rel="stylesheet" href="/pages/savings/savings.css">
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+</head>
+
+<body>
+    <div class="wrapper-div">
+        <header class="header">
+            <nav class="header__nav">
+                <div class="mobile__nav" id="toggle__btn">
+                    <a href="/index.html" class="mobile__nav-logo"><span>CO-OP</span></a>
+                    <div class="mobile__nav-checkbox">
+                        <input type="checkbox" id="checkbox">
+                        <label for="checkbox" class="toggle">
+                            <div class="bars" id="bar1"></div>
+                            <div class="bars" id="bar2"></div>
+                            <div class="bars" id="bar3"></div>
+                        </label>
+                    </div>
+                </div>
+                <ul class="header__nav-list" id="nav__list">
+                    <li class="header__nav-item"><a href="/index.html" class="header__nav-link">Home</a></li>
+                    <li class="header__nav-item"><a href="/index.html" class="header__nav-link">About</a></li>
+                    <li class="header__nav-item"><a href="/index.html" class="header__nav-link">Admistration</a></li>
+                    <li class="header__nav-item"><a href="/index.html" class="header__nav-link"><span
+                                class="header__nav-logo">CO-OP</span></a></li>
+                    <li class="header__nav-item"><a href="/index.html" class="header__nav-link">Journals</a></li>
+                    <li class="header__nav-item"><a href="/index.html" class="header__nav-link">Report</a></li>
+                    <li class="header__nav-item"><a href="/index.html" class="header__nav-link">News</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div class="navigation__arrows">
+            <div class="navigation__arrows-left" id="go-back" title="Go Back">
+                <iconify-icon class="left-arrow" icon="octicon:chevron-up-12"></iconify-icon>
+            </div>
+
+            <a href="/pages/savings/savings.html" class="navigation__arrows-right" id="go-next" title="Go Next">
+                <span class="next">Savings</span>
+                <iconify-icon class="right-arrow" icon="octicon:chevron-up-12"></iconify-icon>
+            </a>
+        </div>
+
+        <main class="report">
+
+            <table>
+                <caption>Shares: <span>David Kasse</span> </caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Name Of Shareholder</th>
+                        <th scope="col">Value Of Holdings</th>
+                        <th scope="col">Share Holdings</th>
+                        <th scope="col">% Of Holding</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-label="Name Of Shareholder">Shareholder A</td>
+                        <td scope="row" data-label="Value Of Holdings">₦8,634,654</td>
+                        <td scope="row" data-label="Share Holdings">11,069</td>
+                        <td data-label="% Of Holding">9.6%</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Name Of Shareholder">Shareholder B</td>
+                        <td scope="row" data-label="Value Of Holdings">₦753,475,734</td>
+                        <td scope="row" data-label="Share Holdings">20,456,646</td>
+                        <td data-label="% Of Holding">51.5%</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Name Of Shareholder">Shareholder C</td>
+                        <td scope="row" data-label="Value Of Holdings">₦56,787,234</td>
+                        <td scope="row" data-label="Share Holdings">4,367,758</td>
+                        <td data-label="% Of Holding">22.7%</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Name Of Shareholder">Shareholder D</td>
+                        <td scope="row" data-label="Value Of Holdings">₦123,456,789</td>
+                        <td scope="row" data-label="Share Holdings">9,023,789</td>
+                        <td data-label="% Of Holding">36.8%</td>
+                    </tr>
+                </tbody>
+            </table>
+        </main>
+
+
+        <footer class="footer">
+            <div class="social__icons">
+                <a href="/index.html" title="Twitter"><iconify-icon icon="mingcute:social-x-line"></iconify-icon></a>
+                <a href="/index.html" title="Telegram"></a><iconify-icon icon="basil:telegram-solid"></iconify-icon></a>
+                <a href="/index.html" title="Linkedin"></a><iconify-icon icon="ri:linkedin-fill"></iconify-icon></a>
+                <a href="/index.html" title="Facebook"></a><iconify-icon icon="gg:facebook"></iconify-icon></a>
+            </div>
+            <p class="copyright">© 2023 <span>CO-OP</span> All rights reserved.</p>
+        </footer>
+    </div>
+    <script src="/scripts/navigate.js"></script>
+    <script src="/scripts/script.js"></script>
+</body>
+
+</html>

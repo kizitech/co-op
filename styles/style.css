@@ -131,7 +131,7 @@ textarea {
     /* move the label to the top */
     vertical-align: top;
 
-   /* turn off scroll bars in IE unless needed */
+    /* turn off scroll bars in IE unless needed */
     overflow: auto;
 }
 
@@ -147,8 +147,7 @@ textarea {
     }
 }
 
-/* remove all animations, transitions and smooth scroll for people that prefer not to see them */
-@media (prefers-reduced-motion: reduce) {
+@media screen and (prefers-reduced-motion: reduce) {
     html:focus-within {
         scroll-behavior: auto;
     }
@@ -172,6 +171,12 @@ textarea {
 .mobile__nav-logo,
 .mobile__nav-checkbox {
     display: none;
+}
+
+.active .mobile__nav-checkbox {
+    right: 1em;
+    position: fixed;
+    z-index: 1000000;
 }
 
 /* TOGGLE SWITCH */
@@ -266,7 +271,7 @@ textarea {
 
 .header__nav-logo,
 .mobile__nav-logo span {
-    font-size: 2.5rem;   
+    font-size: 2.5rem;
     font-weight: 900;
     font-family: 'Dela Gothic One', cursive;
 }
@@ -281,7 +286,7 @@ textarea {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)), url(images/coop_hero_image.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)), url("/images/coop_hero_image.jpg");
 }
 
 .hero form {
@@ -445,6 +450,11 @@ textarea {
     padding: 7px 0;
     background: transparent;
     transition: border-color 0.2s;
+}
+
+.form__field::-webkit-outer-spin-button,
+.form__field::-webkit-inner-spin-button {
+    -webkit-appearance: none;
 }
 
 .form__field::placeholder {
@@ -671,10 +681,16 @@ textarea {
 
 @media only screen and (max-width: 40em) {
 
+    .hero form {
+        padding: 0;
+        border: none;
+    }
+
     /* MOBILE NAVIGATION BAR */
     .mobile__nav {
         display: flex;
         padding: 1em;
+        align-items: center;
         justify-content: space-between;
     }
 
@@ -691,21 +707,39 @@ textarea {
         display: none;
     }
 
+    .header__nav-item {
+        width: 100%;
+        border-bottom: 1px solid #9E9628;
+    }
+
+    .header__nav-item:hover {
+        border-bottom: 1px solid #9e962871;
+    }
+
+    .header__nav-link {
+        font-weight: 300;
+        padding-bottom: 2px;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
     .header__nav-link:hover {
-        color: #9E9628;
-        font-weight: 500;
+        color: #000;
     }
 
     .header__nav-list {
-        gap: 1em;
+        gap: 1.5em;
         inset: 0;
         z-index: 100;
         display: none;
+        margin: 0 4em;
+        position: fixed;
+        padding: 0 0.8em;
         font-size: 1.8rem;
         min-height: 100vh;
-        position: absolute;
         flex-direction: column;
         background-color: #fff;
+        box-shadow: 0 0 20em;
     }
 
     .active .header__nav-list {
@@ -744,6 +778,7 @@ textarea {
     .user-profile__details-list h2 {
         display: flex;
         text-align: end;
+        font-size: 0.8rem;
         align-items: center;
         justify-content: flex-end;
     }
@@ -753,7 +788,27 @@ textarea {
         grid-template-columns: 1fr;
     }
 
-    .report-section__items button{
+    .report-section__items button {
         width: 70%;
+    }
+}
+
+
+@media only screen and (max-width: 25em) {
+    .mobile__nav-logo span {
+        font-size: 1.5rem;
+    }
+
+    .toggle {
+        gap: 0.3em;
+        width: 35px;
+        height: 23px;
+    }
+
+    .footer {
+        gap: 1em;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
     }
 }
