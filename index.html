@@ -1,3 +1,13 @@
+<?php require("memberNo.php") ?>
+
+<?php
+    if(isset($_POST['submit'])){
+        $user = new RegisterMember($_POST['memberNo']);
+    }
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -50,11 +60,15 @@
                         <span>old member</span>
                     </div>
                     <div class="form__group field">
-                        <input type="number" class="form__field" placeholder="Name" required="">
-                        <label for="name" class="form__label">membership number</label>
+                        <input type="number" name="memberNo" class="form__field" placeholder="Name" required="">
+                        <label for="memberNo" class="form__label">membership number</label>
                     </div>
                     <div class="form__submit">
-                        <button type="submit">Submit</button>
+                        <button type="submit" name="submit">Submit</button>
+                    </div>
+                    <div class="verification__detail">
+                        <p class="error"><?php echo @$user->error ?></p>
+                        <p class="success"><?php echo @$user->success ?></p>
                     </div>
                 </form>
             </section>
