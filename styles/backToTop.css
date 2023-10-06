@@ -1,0 +1,28 @@
+.scrollToTopBtn {
+    border: none;
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+    font-size: 3rem;
+    line-height: 48px;
+    width: 1em;
+    height: 1em;
+    padding: 0.6em;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 100;
+    opacity: 0;
+    transform: translateY(100px);
+    transition: all .5s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 2px 5px 20px rgba(145, 143, 125, 0.55);
+    background-image: linear-gradient(147deg, #9E9628 0%, #756e0d 74%);
+}
+
+.showBtn {
+    opacity: 1;
+    transform: translateY(0)
+}

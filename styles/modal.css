@@ -1,0 +1,126 @@
+/* The Modal (background) */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.modal-input-group {
+    gap: 1em;
+    width: 100%;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.modal-input:last-child {
+    grid-column: 1/span 2;
+    margin-top: -0.5em;
+}
+
+@media (min-width: 40em) {
+    .modal-content {
+        max-width: 65%;
+    }
+}
+
+/* Modal Title */
+.modal-title {
+    font-weight: 500;
+    font-size: 1.8rem;
+    padding: 2em 0 1em;
+    text-transform: uppercase;
+}
+
+/* The Close Button */
+.modal-close {
+    float: right;
+    color: #aaaaaa;
+    cursor: pointer;
+    font-size: 2em;
+}
+
+.modal-close:hover {
+    color: #9E9628;
+}
+
+/* Styles for the form */
+.modal-input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.modal-label {
+    font-size: 16px;
+    color: #333;
+    margin-top: 10px;
+    display: block;
+}
+
+.modal-options {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.modal-checkbox {
+    margin-left: 0 !important;
+    margin-right: 0.5em !important;
+}
+
+.modal-terms {
+    font-size: 0.8em;
+}
+
+/* Styles for the Terms & Conditions link */
+.modal-terms-link {
+    color: #9E9628;
+    text-decoration: none;
+}
+
+.modal-terms-link:hover {
+    text-decoration: underline;
+}
+
+/* Styles for the submit button (if present) */
+.modal-button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.modal-submit-button {
+    color: #fff;
+    padding: 1em 3em;
+    border: none;
+    border-radius: 3px;
+    background-image: linear-gradient(147deg, #9E9628 0%, #756e0d 74%);
+    cursor: pointer;
+    margin-top: 10px;
+    transform: all 0.5s ease;
+}
+
+.modal-submit-button:hover {
+    background: rgb(2, 0, 36);
+}

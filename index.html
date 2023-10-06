@@ -4,8 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CO-OP</title>
+    <title>CO-OP Financial Services — Building Wealth, Security, and Prosperity</title>
+    <link rel="stylesheet" href="/styles/faq.css">
+    <link rel="stylesheet" href="/styles/user.css">
     <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="/styles/info.css">
+    <link rel="stylesheet" href="/styles/modal.css">
+    <link rel="stylesheet" href="/styles/clients.css">
+    <link rel="stylesheet" href="/styles/checkbox.css">
+    <link rel="stylesheet" href="styles/backToTop.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
     <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
 </head>
 
@@ -38,7 +46,10 @@
         </header>
         <main>
             <section class="hero">
-                <form action="" method="post" id="membership-number">
+                <form action="" method="post" id="membership-form">
+                    <div class="form__heading">
+                        <h1 class="form__title">Membership Status Options!</h1>
+                    </div>
                     <div class="cntr">
                         <input type="checkbox" id="cbx" class="hidden-xs-up">
                         <label for="cbx" class="cbx"></label>
@@ -49,49 +60,301 @@
                         <label for="cbxx" class="cbxx"></label>
                         <span>old member</span>
                     </div>
-                    <div class="form__group field">
-                        <input type="number" name="memberNo" class="form__field" placeholder="Name" required="">
-                        <label for="memberNo" class="form__label">membership number</label>
-                    </div>
-                    <div class="form__submit">
-                        <button type="submit" name="submit">Submit</button>
-                    </div>
-                    <div class="verification__detail">
-                        <p class="error"></p>
-                        <p class="success"></p>
+                    <div class="form__field-info" id="form__field-info">
+                        <div class="form__group field">
+                            <input type="number" name="memberNo" class="form__field" placeholder="Name" required="">
+                            <label for="memberNo" class="form__label">membership number</label>
+                        </div>
+                        <div class="form__submit">
+                            <button type="submit" name="submit">Submit</button>
+                        </div>
+                        <div class="forgot__number">
+                            <a href="#" class="forgot__number-link">Forgot number?</a>
+                        </div>
+                        <div class="verification__detail">
+                            <p class="error"></p>
+                            <p class="success"></p>
+                        </div>
                     </div>
                 </form>
             </section>
         </main>
 
-        <article class="user-profile">
-            <div class="user-profile__info">
-                <section class="user-profile__details">
-                    <h3 class="user-profile__info-heading">Date Joined: <span class="user-profile__info-date">3rd Jul.
-                            2016</span></h3>
-                    <ul class="user-profile__details-list">
-                        <h2 class="user-profile__detail-heading">Amount Paid:</h2>
-                        <p class="user-profile__detail-value">₦<span class="user-profile__detail-amount">53,000</span>
-                        </p>
-                        <h2 class="user-profile__detail-heading">Monthly Saving:</h2>
-                        <p class="user-profile__detail-value">₦<span class="user-profile__detail-amount">30,000</span>
-                        </p>
-                        <h2 class="user-profile__detail-heading">Retirement Date:</h2>
-                        <p class="user-profile__detail-value">3rd Jul. 2024</p>
-                        <h2 class="user-profile__detail-heading">Number of Units Holding:</h2>
-                        <p class="user-profile__detail-value">7 <span>units</span></p>
-                    </ul>
-                </section>
-                <section class="user-profile__photo">
-                    <img src="images/admin_profile_photo.jpg" alt="admin profile" class="user-profile__photo-image"
-                        title="Profile Image">
-                    <div class="user-profile__photo-details">
-                        <h2 class="user-profile__photo-heading">Name:</h2>
-                        <p class="user-profile__photo-value">Akindele Timilehin</p>
+        <section class="modal-section">
+            <div id="myModal" class="modal">
+                <form action="" method="post" class="modal-content">
+                    <span class="close modal-close"><iconify-icon icon="ri:close-line"></iconify-icon></span>
+                    <h2 class="modal-title">Create Account</h2>
+                    <div class="modal-input-group">
+                        <input type="text" name="first name" placeholder="First Name" id="" class="modal-input">
+                        <input type="text" name="last name" placeholder="Last Name" id="" class="modal-input">
+                        <input type="tel" name="phone number" placeholder="Phone Number" id="" class="modal-input">
+                        <input type="email" name="email" placeholder="Email" id="" class="modal-input">
+                        <input type="text" name="next of kin" placeholder="Next of Kin" id="" class="modal-input">
+                        <input type="number" name="monthly saving" placeholder="Monthly Saving" id=""
+                            class="modal-input">
+                        <label for="dateOfBirth" class="modal-label">Date of Birth</label>
+                        <input type="date" name="date of birth" id="dateOfBirth" class="modal-input">
                     </div>
-                </section>
+                    <div class="modal-options">
+                        <div class="cntr modal-checkbox">
+                            <input type="checkbox" id="cbxxx" class="hidden-xs-up modal-checkbox-input">
+                            <label for="cbxxx" class="cbxxx modal-checkbox-label"></label>
+                        </div>
+                        <p class="modal-terms">I agree to the <a href="#" class="modal-terms-link">Terms &
+                                Conditions</a> of the
+                            <span>CO-OP</span> co.
+                        </p>
+                    </div>
+                    <div class="modal-button">
+                        <input type="submit" value="Submit" class="modal-submit-button">
+                    </div>
+                </form>
             </div>
-        </article>
+        </section>
+
+
+        <section class="coop-section">
+            <div class="coop-section__content">
+                <div class="coop-section__heading">
+                    <h2 class="coop-section__title">About CO-OP</h2>
+                </div>
+                <p class="coop-section__text">Welcome to CO-OP, your trusted partner in financial growth and prosperity.
+                    At
+                    CO-OP, we're dedicated
+                    to empowering individuals and communities through a wide range of financial services, including
+                    investing,
+                    savings, loaning, and shareholding. With a legacy of financial excellence, we have been shaping the
+                    future
+                    of finance and
+                    supporting our members' financial aspirations for 20 years.</p>
+            </div>
+        </section>
+
+        <section class="coop-section">
+            <div class="coop-section__content">
+                <div class="coop-section__heading">
+                    <h2 class="coop-section__title">Our Mission</h2>
+                </div>
+                <p class="coop-section__text">Our mission at CO-OP is to provide accessible and innovative financial
+                    solutions
+                    that enable our
+                    members to achieve their dreams and build lasting wealth. We believe in the power of collaboration,
+                    and our
+                    cooperative
+                    structure allows us to focus on the collective good, creating a stronger financial future for all.
+                </p>
+            </div>
+        </section>
+
+        <section class="coop-section">
+            <div class="coop-section__content">
+                <div class="coop-section__heading">
+                    <h2 class="coop-section__title">Why Choose CO-OP?</h2>
+                </div>
+                <ul class="coop-section__list">
+                    <li class="coop-section__list-item coop-section__list-item--member-centric"><strong>Member-Centric
+                            Approach:</strong> We prioritize our members' needs, tailoring our services to your unique
+                        financial
+                        goals and aspirations.</li>
+                    <li class="coop-section__list-item coop-section__list-item--financial-expertise"><strong>Financial
+                            Expertise:</strong> Our team of financial experts is committed to helping you make sound
+                        financial
+                        decisions and achieve your objectives.</li>
+                    <li class="coop-section__list-item coop-section__list-item--community-impact"><strong>Community
+                            Impact:</strong> By choosing CO-OP, you're not just investing in your financial future;
+                        you're also
+                        investing in the well-being of your community.</li>
+                    <li class="coop-section__list-item coop-section__list-item--innovation"><strong>Innovation:</strong>
+                        We
+                        embrace cutting-edge technology and financial solutions to ensure our members have access to the
+                        best
+                        tools and services available.</li>
+                </ul>
+            </div>
+        </section>
+
+
+        <section class="timeline__section" id="timeline">
+            <div class="timeline__heading__box">
+                <h2 class="timeline__heading__text">Our Services</h2>
+            </div>
+
+            <div class="timeline__text__box">
+                <div class="timeline__boxes">
+                    <div class="timeline__box-l">
+                        <h3 class="timeline__text__heading-r">Investing:</h3>
+                        <p class="timeline__text">
+                            CO-OP offers a wide range of investment options designed to help you grow your wealth.
+                            Whether you're a seasoned
+                            investor or just starting, our expert advisors are here to guide you on your investment
+                            journey.
+                        </p>
+                    </div>
+                    <p class="timeline__number">1</p>
+                    <h3 class="timeline__text__heading-l">Wealth Growth</h3>
+                </div>
+                <div class="timeline__boxes">
+                    <h3 class="timeline__text__heading-r">Financial Security</h3>
+                    <p class="timeline__number">2</p>
+
+                    <div class="timeline__box-r">
+                        <h3 class="timeline__text__heading-l">Savings:</h3>
+                        <p class="timeline__text">
+                            Building a financial safety net is crucial for achieving your goals. Our savings accounts
+                            and programs are tailored to
+                            help you save smartly and secure your future.
+                        </p>
+                    </div>
+                </div>
+                <div class="timeline__boxes">
+                    <div class="timeline__box-l">
+                        <h3 class="timeline__text__heading-r">Loaning:</h3>
+                        <p class="timeline__text">
+                            When life presents opportunities or challenges that require financial support, CO-OP is here
+                            to assist. We offer
+                            competitive loan products designed to meet your specific needs and budget.
+                        </p>
+                    </div>
+                    <p class="timeline__number">3</p>
+                    <h3 class="timeline__text__heading-l">Financial Assistance</h3>
+                </div>
+                <div class="timeline__boxes">
+                    <h3 class="timeline__text__heading-r">Community Prosperity</h3>
+                    <p class="timeline__number">4</p>
+
+                    <div class="timeline__box-r">
+                        <h3 class="timeline__text__heading-l">Shareholding:</h3>
+                        <p class="timeline__text">
+                            As a cooperative, we encourage our members to become shareholders, sharing in the success
+                            and growth of our
+                            organization. Together, we create a stronger and more prosperous community.
+                        </p>
+                    </div>
+                </div>
+                <div class="timeline__boxes">
+                    <div class="timeline__box-l">
+                        <h3 class="timeline__text__heading-r">Retirement Planning:</h3>
+                        <p class="timeline__text">
+                            Planning for a secure and comfortable retirement is essential. CO-OP provides retirement
+                            planning services that help you
+                            set realistic goals, choose appropriate investment strategies, and ensure a financially
+                            stable future during your
+                            retirement years.
+                        </p>
+                    </div>
+                    <p class="timeline__number">5</p>
+                    <h3 class="timeline__text__heading-l">Future Preparedness</h3>
+                </div>
+                <div class="timeline__boxes">
+                    <h3 class="timeline__text__heading-r">Asset Protection</h3>
+                    <p class="timeline__number">6</p>
+
+                    <div class="timeline__box-r">
+                        <h3 class="timeline__text__heading-l">Insurance Services:</h3>
+                        <p class="timeline__text">
+                            Protecting your assets and loved ones is paramount. CO-OP offers a range of insurance
+                            options, including life insurance,
+                            health insurance, and property insurance, to safeguard your financial well-being and provide
+                            peace of mind.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="review">
+            <div class="review__title">
+                <h1 class="review__title-text">Clients Reviews</h1>
+            </div>
+            <div class="blog-slider">
+                <div class="blog-slider__wrp swiper-wrapper">
+                    <div class="blog-slider__item swiper-slide">
+                        <div class="blog-slider__img">
+
+                            <img src="/images/testimonial1.jpg" alt="princess-akachi">
+                        </div>
+                        <div class="blog-slider__content">
+                            <span class="blog-slider__code">05 March 2023</span>
+                            <div class="blog-slider__title">Princess Akachi</div>
+                            <div class="blog-slider__text"><q>CO-OP makes saving a breeze. I love how user-friendly it
+                                    is,
+                                    and the automatic savings feature helps me reach my
+                                    financial goals effortlessly.</q></div>
+                            <a href="#membership-form" class="blog-slider__button">Easy Savings with CO-OP!</a>
+                        </div>
+                    </div>
+                    <div class="blog-slider__item swiper-slide">
+                        <div class="blog-slider__img">
+                            <img src="/images/testimonial2.jpg" alt="leon-obasi">
+                        </div>
+                        <div class="blog-slider__content">
+                            <span class="blog-slider__code">26 July 2023</span>
+                            <div class="blog-slider__title">Leon Obasi</div>
+                            <div class="blog-slider__text"><q>CO-OP is perfect for beginners like me. It's
+                                    straightforward
+                                    to invest, and I've watched my money grow steadily. Plus,
+                                    the loan option is handy in a pinch!</q></div>
+                            <a href="#membership-form" class="blog-slider__button">Investing Made Simple!</a>
+                        </div>
+                    </div>
+
+                    <div class="blog-slider__item swiper-slide">
+                        <div class="blog-slider__img">
+                            <img src="/images/testimonial3.jpg" alt="rodney-adewale">
+                        </div>
+                        <div class="blog-slider__content">
+                            <span class="blog-slider__code">14 August 2023</span>
+                            <div class="blog-slider__title">Rodney Adewale</div>
+                            <div class="blog-slider__text"><q>CO-OP simplifies shareholding. I can buy and manage shares
+                                    easily. Real-time updates and loan access make it a
+                                    must-have financial tool.</q></div>
+                            <a href="#membership-form" class="blog-slider__button">Shareholding Made Easy!</a>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="blog-slider__pagination"></div>
+            </div>
+        </section>
+
+
+        <section class="personal-info">
+            <div class="personal-info__header">
+                <h1 class="personal-info__title">Personal Information</h1>
+            </div>
+            <article class="user-profile">
+                <div class="user-profile__info">
+                    <section class="user-profile__details">
+                        <h3 class="user-profile__info-heading">Date Joined: <span class="user-profile__info-date">3rd
+                                Jul.
+                                2016</span></h3>
+                        <ul class="user-profile__details-list">
+                            <h2 class="user-profile__detail-heading">Amount Paid:</h2>
+                            <p class="user-profile__detail-value">₦<span
+                                    class="user-profile__detail-amount">53,000</span>
+                            </p>
+                            <h2 class="user-profile__detail-heading">Monthly Saving:</h2>
+                            <p class="user-profile__detail-value">₦<span
+                                    class="user-profile__detail-amount">30,000</span>
+                            </p>
+                            <h2 class="user-profile__detail-heading">Retirement Date:</h2>
+                            <p class="user-profile__detail-value">3rd Jul. 2024</p>
+                            <h2 class="user-profile__detail-heading">Number of Units Holding:</h2>
+                            <p class="user-profile__detail-value">7 <span>units</span></p>
+                        </ul>
+                    </section>
+                    <section class="user-profile__photo">
+                        <img src="images/admin_profile_photo.jpg" alt="admin profile" class="user-profile__photo-image"
+                            title="Profile Image">
+                        <div class="user-profile__photo-details">
+                            <h2 class="user-profile__photo-heading">Name:</h2>
+                            <p class="user-profile__photo-value">Akindele Timilehin</p>
+                        </div>
+                    </section>
+                </div>
+            </article>
+        </section>
 
         <section class="report-section">
             <div class="report-section__items">
@@ -116,6 +379,122 @@
             </div>
         </section>
 
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <div class="accordion">
+                <div class="accordion-item">
+                    <button id="accordion-button-1" aria-expanded="false"><span class="accordion-title">What is
+                            CO-OP?</span><span class="icon" aria-hidden="true"></span></button>
+                    <div class="accordion-content">
+                        <p>CO-OP is a cooperative financial platform that allows members to collectively manage their
+                            finances,
+                            including savings, loans, and shareholding.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button id="accordion-button-2" aria-expanded="false"><span class="accordion-title">How do I become
+                            a member
+                            of CO-OP?</span><span class="icon" aria-hidden="true"></span></button>
+                    <div class="accordion-content">
+                        <p>To become a member of CO-OP, you typically need to apply for membership through the
+                            platform's
+                            website or a local branch. Membership requirements may vary, so check with CO-OP for
+                            specific
+                            details.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button id="accordion-button-3" aria-expanded="false"><span class="accordion-title">What are the
+                            benefits of
+                            joining CO-OP?</span><span class="icon" aria-hidden="true"></span></button>
+                    <div class="accordion-content">
+                        <p>Joining CO-OP offers various benefits, including access to competitive savings rates,
+                            affordable
+                            loans, and the opportunity to invest in cooperative enterprises. It also fosters a sense of
+                            community and shared financial responsibility.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button id="accordion-button-4" aria-expanded="false"><span class="accordion-title">How can I open a
+                            savings
+                            account with CO-OP?</span><span class="icon" aria-hidden="true"></span></button>
+                    <div class="accordion-content">
+                        <p>To open a savings account, log in to your CO-OP account or visit a local branch. Follow the
+                            account
+                            opening process, provide necessary documentation, and make your initial deposit.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button id="accordion-button-5" aria-expanded="false"><span class="accordion-title">Can I apply for
+                            a loan
+                            through CO-OP?</span><span class="icon" aria-hidden="true"></span></button>
+                    <div class="accordion-content">
+                        <p>Yes, CO-OP offers lending services to its members. You can apply for a loan through the
+                            platform by
+                            filling out a loan application, providing required documentation, and going through the
+                            approval
+                            process.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button id="accordion-button-6" aria-expanded="false"><span class="accordion-title">What is
+                            shareholding,
+                            and how does it work in CO-OP?</span><span class="icon" aria-hidden="true"></span></button>
+                    <div class="accordion-content">
+                        <p>Shareholding in CO-OP means investing in the cooperative by purchasing shares. This allows
+                            you to
+                            have a stake in the organization's governance and potentially earn dividends based on your
+                            shares.
+                        </p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button id="accordion-button-7" aria-expanded="false"><span class="accordion-title">How are
+                            financial
+                            decisions made in CO-OP?</span><span class="icon" aria-hidden="true"></span></button>
+                    <div class="accordion-content">
+                        <p>CO-OP operates on a democratic basis, where members often have a say in important financial
+                            decisions. Voting on key matters may occur through meetings or online ballots, depending on
+                            the
+                            cooperative's structure.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button id="accordion-button-8" aria-expanded="false"><span class="accordion-title">Is my money safe
+                            with
+                            CO-OP?</span><span class="icon" aria-hidden="true"></span></button>
+                    <div class="accordion-content">
+                        <p>Cooperative financial institutions are typically regulated and insured, similar to
+                            traditional banks.
+                            Your funds in CO-OP are generally protected up to a certain limit by a deposit insurance
+                            program.
+                            Check with CO-OP for specific details on account protection.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button id="accordion-button-9" aria-expanded="false"><span class="accordion-title">Can I access my
+                            CO-OP
+                            account online or through a mobile app?</span><span class="icon"
+                            aria-hidden="true"></span></button>
+                    <div class="accordion-content">
+                        <p>Yes, CO-OP typically offers online banking and mobile app access, allowing you to manage your
+                            accounts, apply for loans, and view your shareholding information conveniently.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button id="accordion-button-10" aria-expanded="false"><span class="accordion-title">How can I
+                            contact CO-OP
+                            customer support?</span><span class="icon" aria-hidden="true"></span></button>
+                    <div class="accordion-content">
+                        <p>You can reach CO-OP customer support through their website, phone, email, or by visiting a
+                            local
+                            branch. Contact details are usually available on the CO-OP website.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <button class="scrollToTopBtn" title="Back To Top"><iconify-icon icon="bxs:chevron-up"></iconify-icon></button>
 
         <footer class="footer">
             <div class="social__icons">
@@ -127,7 +506,12 @@
             <p class="copyright">© 2023 <span>CO-OP</span> All rights reserved.</p>
         </footer>
     </div>
+    <script src="/scripts/faq.js"></script>
+    <script src="/scripts/modal.js"></script>
     <script src="/scripts/script.js"></script>
+    <script src="/scripts/backToTop.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="/scripts/clients.js"></script>
 </body>
 
 </html>

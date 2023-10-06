@@ -1,0 +1,132 @@
+/* USER PROFILE */
+.personal-info {
+    margin: 5em 0 0;
+}
+
+.personal-info__header {
+    padding: 0 13%;
+    margin-bottom: -2em;
+}
+
+.personal-info__title {
+    font-weight: normal;
+    color: #9E9628;
+    font-size: calc(2.5rem + ((1vw - 0.8rem) * 0.5));
+}
+
+.user-profile {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.user-profile__info {
+    gap: 3em;
+    width: 70%;
+    margin: 5em;
+    padding: 3.5em;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #9b9b9b;
+}
+
+.user-profile__info-heading {
+    font-size: 0.9em;
+    margin-bottom: 3em;
+}
+
+.user-profile__info-heading span {
+    color: #9E9628;
+    padding-left: 0.5em;
+}
+
+.user-profile__details-list {
+    gap: 2em;
+    display: grid;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    grid-template-columns: 1fr 1fr;
+}
+
+.user-profile__details-list h2 {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.user-profile__photo {
+    gap: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.user-profile__photo-image {
+    width: 12em;
+    height: 12em;
+    object-fit: cover;
+    object-position: center;
+}
+
+.user-profile__photo-details {
+    gap: 0.5em;
+    display: flex;
+    font-size: 0.9rem;
+    align-items: center;
+}
+
+.user-profile__photo-value {
+    color: #9E9628;
+}
+
+
+
+
+/* REPORT SECTION */
+.report-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.report-section__items {
+    display: grid;
+    width: 80%;
+    align-items: center;
+    margin-bottom: 4em;
+    justify-content: center;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.report-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.report-item__button {
+    gap: 0.5em;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    border-radius: 0.5em;
+    padding: 0.5em 2.5em;
+    flex-direction: column;
+    justify-content: center;
+    transition: background 250ms ease;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    background-image: linear-gradient(147deg, #9E9628 0%, #756e0d 74%);
+}
+
+.report-item__button:hover {
+    box-shadow: none;
+    background: rgb(2, 0, 36);
+}
+
+.report-item__button span {
+    font-weight: 600;
+}

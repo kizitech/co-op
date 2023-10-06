@@ -14,6 +14,7 @@ table {
     padding: 0;
     width: 100%;
     table-layout: fixed;
+    overflow: hidden;
 }
 
 table caption {
@@ -29,9 +30,14 @@ table caption span {
 }
 
 table tr {
+    transition: all 1s ease-in-out;
     background-color: #f8f8f8;
     border: 1px solid #ddd;
     padding: .35em;
+}
+
+table tr.slide-out {
+    transform: translateX(100%);
 }
 
 table th {
@@ -90,10 +96,9 @@ table td {
     }
 
     table td::before {
-        /*
-    * aria-label has no advantage, it won't be read inside a table
+    /* aria-label has no advantage, it won't be read inside a table */
     content: attr(aria-label);
-    */
+
         content: attr(data-label);
         float: left;
         font-weight: bold;
