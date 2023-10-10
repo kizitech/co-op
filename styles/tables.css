@@ -1,8 +1,9 @@
-.report {
+.report-table {
     padding: 0 5em;
     display: flex;
     margin: 0 auto 3em;
     align-items: center;
+    flex-direction: column;
     min-height: fit-content;
     justify-content: center;
 }
@@ -63,7 +64,7 @@ table td {
         font-size: 1.3rem;
     }
 
-    .report {
+    .report-table {
         padding: 0 1em;
     }
 

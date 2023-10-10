@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<!-- Created by CodingLab |www.youtube.com/CodingLabYT-->
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <title> CO-OP Financial Services — My Dashboard</title>
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="/styles/user-details.css">
+    <link rel="stylesheet" href="/styles/sidebar.css">
+    <link rel="stylesheet" href="/pages/dashboard/dashboard.css">
+    <!-- Boxicons CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <div class="sidebar">
+        <div class="logo-details">
+            <i class='bx bxl-c-plus-plus icon'></i>
+            <div class="logo_name">CO-OP</div>
+            <i class='bx bx-menu' id="btn"></i>
+        </div>
+        <ul class="nav-list">
+            <li>
+                <a href="/pages/dashboard/dashboard.html" class="active-button">
+                    <i class='bx bx-grid-alt active-icon'></i>
+                    <span class="links_name active-links_name">Dashboard</span>
+                </a>
+                <span class="tooltip">Dashboard</span>
+            </li>
+            <li>
+                <a href="/pages/user/user.html">
+                    <i class='bx bx-user'></i>
+                    <span class="links_name">User</span>
+                </a>
+                <span class="tooltip">User</span>
+            </li>
+            <li>
+                <a href="/pages/savings/savings.html">
+                    <i class='bx bx-wallet'></i>
+                    <span class="links_name">Savings</span>
+                </a>
+                <span class="tooltip">Savings</span>
+            </li>
+            <li>
+                <a href="/pages/loans/loans.html">
+                    <i class='bx bx-money'></i>
+                    <span class="links_name">Loans</span>
+                </a>
+                <span class="tooltip">Loans</span>
+            </li>
+            <li>
+                <a href="/pages/shares/shares.html">
+                    <i class='bx bxs-bank'></i>
+                    <span class="links_name">Shares</span>
+                </a>
+                <span class="tooltip">Shares</span>
+            </li>
+            <li>
+                <a href="/pages/reports/reports.html">
+                    <i class='bx bx-shield-alt-2'></i>
+                    <span class="links_name">Report</span>
+                </a>
+                <span class="tooltip">Report</span>
+            </li>
+            <li>
+                <a href="/pages/settings/settings.html">
+                    <i class='bx bx-cog'></i>
+                    <span class="links_name">Setting</span>
+                </a>
+                <span class="tooltip">Setting</span>
+            </li>
+            <li class="profile">
+                <div class="profile-details">
+                    <img src="/images/admin_profile_photo.jpg" alt="profileImg">
+                    <div class="name_job">
+                        <div class="name">Akindele Timilehin</div>
+                        <div class="job">Agriculturist</div>
+                    </div>
+                </div>
+                <i class='bx bx-log-out' title="Log Out" id="log_out"></i>
+            </li>
+        </ul>
+    </div>
+    <section class="dashboard-section">
+        <h1 class="text">Dashboard</h1>
+        <section class="personal-info">
+            <div class="personal-info__header">
+                <h1 class="personal-info__title">Personal Information</h1>
+            </div>
+            <article class="user-profile">
+                <div class="user-profile__info">
+                    <section class="user-profile__details">
+                        <h3 class="user-profile__info-heading">Date Joined: <span class="user-profile__info-date">3rd
+                                Jul.
+                                2016</span></h3>
+                        <ul class="user-profile__details-list">
+                            <h2 class="user-profile__detail-heading">Amount Paid:</h2>
+                            <p class="user-profile__detail-value">₦<span
+                                    class="user-profile__detail-amount">53,000</span>
+                            </p>
+                            <h2 class="user-profile__detail-heading">Monthly Saving:</h2>
+                            <p class="user-profile__detail-value">₦<span
+                                    class="user-profile__detail-amount">30,000</span>
+                            </p>
+                            <h2 class="user-profile__detail-heading">Retirement Date:</h2>
+                            <p class="user-profile__detail-value">3rd Jul. 2024</p>
+                            <h2 class="user-profile__detail-heading">Number of Units Holding:</h2>
+                            <p class="user-profile__detail-value">7 <span>units</span></p>
+                        </ul>
+                    </section>
+                    <section class="user-profile__photo">
+                        <img src="/images/admin_profile_photo.jpg" alt="admin profile" class="user-profile__photo-image"
+                            title="Profile Image">
+                        <div class="user-profile__photo-details">
+                            <h2 class="user-profile__photo-heading">Name:</h2>
+                            <p class="user-profile__photo-value">Akindele Timilehin</p>
+                        </div>
+                    </section>
+                </div>
+            </article>
+        </section>
+
+        <section class="report-section">
+            <div class="report-section__items">
+                <a href="/pages/savings/savings.html" class="report-item" title="Savings">
+                    <button type="button" class="report-item__button">
+                        <p class="report-item__title">Report 1</p>
+                        <span class="report-item__category">SAVINGS</span>
+                    </button>
+                </a>
+                <a href="/pages/loans/loans.html" class="report-item" title="Loans">
+                    <button type="button" class="report-item__button">
+                        <p class="report-item__title">Report 2</p>
+                        <span class="report-item__category">LOANS</span>
+                    </button>
+                </a>
+                <a href="/pages/shares/shares.html" class="report-item" title="Shares">
+                    <button type="button" class="report-item__button">
+                        <p class="report-item__title">Report 3</p>
+                        <span class="report-item__category">SHARES</span>
+                    </button>
+                </a>
+            </div>
+        </section>
+
+    </section>
+    <script src="/pages/dashboard/dashboard.js"></script>
+</body>
+
+</html>

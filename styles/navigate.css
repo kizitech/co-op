@@ -34,7 +34,7 @@
 }
 
 .right-arrow {
-    opacity: 0;
+    opacity: 1;
     color: #9E9628;
     transform: rotate(90deg);
     transition: all 250ms ease;
@@ -52,8 +52,3 @@
     margin-right: 0.5em;
     text-decoration: none;
 }
-
-.navigation__arrows-right:hover .right-arrow {
-    opacity: 1;
-}
-

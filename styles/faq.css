@@ -104,6 +104,10 @@
     will-change: opacity, max-height;
 }
 
+.accordion .accordion-content::-webkit-scrollbar {
+    display: none;
+}
+
 .accordion .accordion-content p {
     color: #fff;
     font-size: 1rem;

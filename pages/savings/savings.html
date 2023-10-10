@@ -7,118 +7,157 @@
     <title>CO-OP Financial Services — Savings</title>
     <link rel="stylesheet" href="/styles/style.css">
     <link rel="stylesheet" href="/styles/tables.css">
+    <link rel="stylesheet" href="/styles/sidebar.css">
     <link rel="stylesheet" href="/styles/navigate.css">
     <link rel="stylesheet" href="/pages/savings/savings.css">
+    <!-- Boxicons CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
 </head>
 
 <body>
     <div class="wrapper-div">
-        <header class="header">
-            <nav class="header__nav">
-                <div class="mobile__nav" id="toggle__btn">
-                    <a href="/index.html" class="mobile__nav-logo"><span>CO-OP</span></a>
-                    <div class="mobile__nav-checkbox">
-                        <input type="checkbox" id="checkbox">
-                        <label for="checkbox" class="toggle">
-                            <div class="bars" id="bar1"></div>
-                            <div class="bars" id="bar2"></div>
-                            <div class="bars" id="bar3"></div>
-                        </label>
+        <div class="sidebar">
+            <div class="logo-details">
+                <i class='bx bxl-c-plus-plus icon'></i>
+                <div class="logo_name">CO-OP</div>
+                <i class='bx bx-menu' id="btn"></i>
+            </div>
+            <ul class="nav-list">
+                <li>
+                    <a href="/pages/dashboard/dashboard.html">
+                        <i class='bx bx-grid-alt'></i>
+                        <span class="links_name">Dashboard</span>
+                    </a>
+                    <span class="tooltip">Dashboard</span>
+                </li>
+                <li>
+                    <a href="/pages/user/user.html">
+                        <i class='bx bx-user'></i>
+                        <span class="links_name">User</span>
+                    </a>
+                    <span class="tooltip">User</span>
+                </li>
+                <li>
+                    <a href="/pages/savings/savings.html" class="active-button">
+                        <i class='bx bx-wallet active-icon'></i>
+                        <span class="links_name active-links_name">Savings</span>
+                    </a>
+                    <span class="tooltip">Savings</span>
+                </li>
+                <li>
+                    <a href="/pages/loans/loans.html">
+                        <i class='bx bx-money'></i>
+                        <span class="links_name">Loans</span>
+                    </a>
+                    <span class="tooltip">Loans</span>
+                </li>
+                <li>
+                    <a href="/pages/shares/shares.html">
+                        <i class='bx bxs-bank'></i>
+                        <span class="links_name">Shares</span>
+                    </a>
+                    <span class="tooltip">Shares</span>
+                </li>
+                <li>
+                    <a href="/pages/reports/reports.html">
+                        <i class='bx bx-shield-alt-2'></i>
+                        <span class="links_name">Report</span>
+                    </a>
+                    <span class="tooltip">Report</span>
+                </li>
+                <li>
+                    <a href="/pages/settings/settings.html">
+                        <i class='bx bx-cog'></i>
+                        <span class="links_name">Setting</span>
+                    </a>
+                    <span class="tooltip">Setting</span>
+                </li>
+                <li class="profile">
+                    <div class="profile-details">
+                        <img src="/images/admin_profile_photo.jpg" alt="profileImg">
+                        <div class="name_job">
+                            <div class="name">Akindele Timilehin</div>
+                            <div class="job">Agriculturist</div>
+                        </div>
                     </div>
-                </div>
-                <ul class="header__nav-list" id="nav__list">
-                    <li class="header__nav-item"><a href="/index.html" class="header__nav-link">Home</a></li>
-                    <li class="header__nav-item"><a href="/index.html" class="header__nav-link">About</a></li>
-                    <li class="header__nav-item"><a href="/index.html" class="header__nav-link">Admistration</a></li>
-                    <li class="header__nav-item"><a href="/index.html" class="header__nav-link"><span
-                                class="header__nav-logo">CO-OP</span></a></li>
-                    <li class="header__nav-item"><a href="/index.html" class="header__nav-link">Journals</a></li>
-                    <li class="header__nav-item"><a href="/index.html" class="header__nav-link">Report</a></li>
-                    <li class="header__nav-item"><a href="/index.html" class="header__nav-link">News</a></li>
-                </ul>
-            </nav>
-        </header>
-        <div class="navigation__arrows">
-            <div class="navigation__arrows-left" id="go-back" title="Go Back">
-                <iconify-icon class="left-arrow" icon="octicon:chevron-up-12"></iconify-icon>
-            </div>
-
-            <a href="/pages/loans/loans.html" class="navigation__arrows-right" id="go-next" title="Go Next">
-                <span class="next">Loans</span>
-                <iconify-icon class="right-arrow" icon="octicon:chevron-up-12"></iconify-icon>
-            </a>
+                    <i class='bx bx-log-out' title="Log Out" id="log_out"></i>
+                </li>
+            </ul>
         </div>
+        <section class="savings-section">
+            <h1 class="text">Savings</h1>
+            <div class="navigation__arrows">
+                <div class="navigation__arrows-left" id="go-back" title="Go Back">
+                    <iconify-icon class="left-arrow" icon="octicon:chevron-up-12"></iconify-icon>
+                </div>
 
-        <main class="report">
-
-            <table>
-                <caption>Savings: <span>David Kasse</span> </caption>
-                <thead>
-                    <tr>
-                        <th scope="col">Date</th>
-                        <th scope="col">Particulars</th>
-                        <th scope="col">Account Type</th>
-                        <th scope="col">Dr</th>
-                        <th scope="col">Cr</th>
-                        <th scope="col">Bal</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td data-label="Due Date">03/01/2016</td>
-                        <td scope="row" data-label="Particulars">Cash</td>
-                        <td scope="row" data-label="Account Type">Asset</td>
-                        <td data-label="Dr">₦2,443</td>
-                        <td data-label="Cr">₦2,443</td>
-                        <td data-label="Bal">₦2,443</td>
-                    </tr>
-                    <tr>
-                        <td data-label="Due Date">04/01/2016</td>
-                        <td scope="row" data-label="Particulars">Common Stock</td>
-                        <td scope="row" data-label="Account Type">Equity</td>
-                        <td data-label="Dr">₦1,190</td>
-                        <td data-label="Cr">₦1,190</td>
-                        <td data-label="Bal">₦1,190</td>
-                    </tr>
-                    <tr>
-                        <td data-label="Due Date">03/01/2016</td>
-                        <td scope="row" data-label="Particulars">Payroll Payable</td>
-                        <td scope="row" data-label="Account Type">Liability</td>
-                        <td data-label="Dr">₦1,181</td>
-                        <td data-label="Cr">₦1,181</td>
-                        <td data-label="Bal">₦1,181</td>
-                    </tr>
-                    <tr>
-                        <td data-label="Due Date">02/01/2016</td>
-                        <td scope="row" data-label="Account">Revenue</td>
-                        <td scope="row" data-label="Account Type">Revenue</td>
-                        <td data-label="Dr">₦842</td>
-                        <td data-label="Cr">₦842</td>
-                        <td data-label="Bal">₦842</td>
-                    </tr>
-                    <tr>
-                        <td data-label="Due Date">02/01/2016</td>
-                        <td scope="row" data-label="Account">Utilities</td>
-                        <td scope="row" data-label="Account Type">Expense</td>
-                        <td data-label="Dr">₦842</td>
-                        <td data-label="Cr">₦842</td>
-                        <td data-label="Bal">₦842</td>
-                    </tr>
-                </tbody>
-            </table>
-        </main>
-
-
-        <footer class="footer">
-            <div class="social__icons">
-                <a href="/index.html" title="Twitter"><iconify-icon icon="mingcute:social-x-line"></iconify-icon></a>
-                <a href="/index.html" title="Telegram"></a><iconify-icon icon="basil:telegram-solid"></iconify-icon></a>
-                <a href="/index.html" title="Linkedin"></a><iconify-icon icon="ri:linkedin-fill"></iconify-icon></a>
-                <a href="/index.html" title="Facebook"></a><iconify-icon icon="gg:facebook"></iconify-icon></a>
+                <a href="/pages/loans/loans.html" class="navigation__arrows-right" id="go-next" title="Go Next">
+                    <span class="next">Loans</span>
+                    <iconify-icon class="right-arrow" icon="octicon:chevron-up-12"></iconify-icon>
+                </a>
             </div>
-            <p class="copyright">© 2023 <span>CO-OP</span> All rights reserved.</p>
-        </footer>
+
+            <main class="report-table">
+
+                <table>
+                    <caption>Savings: <span>David Kasse</span> </caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Date</th>
+                            <th scope="col">Particulars</th>
+                            <th scope="col">Account Type</th>
+                            <th scope="col">Dr</th>
+                            <th scope="col">Cr</th>
+                            <th scope="col">Bal</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td data-label="Due Date">03/01/2016</td>
+                            <td scope="row" data-label="Particulars">Cash</td>
+                            <td scope="row" data-label="Account Type">Asset</td>
+                            <td data-label="Dr">₦2,443</td>
+                            <td data-label="Cr">₦2,443</td>
+                            <td data-label="Bal">₦2,443</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Due Date">04/01/2016</td>
+                            <td scope="row" data-label="Particulars">Common Stock</td>
+                            <td scope="row" data-label="Account Type">Equity</td>
+                            <td data-label="Dr">₦1,190</td>
+                            <td data-label="Cr">₦1,190</td>
+                            <td data-label="Bal">₦1,190</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Due Date">03/01/2016</td>
+                            <td scope="row" data-label="Particulars">Payroll Payable</td>
+                            <td scope="row" data-label="Account Type">Liability</td>
+                            <td data-label="Dr">₦1,181</td>
+                            <td data-label="Cr">₦1,181</td>
+                            <td data-label="Bal">₦1,181</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Due Date">02/01/2016</td>
+                            <td scope="row" data-label="Account">Revenue</td>
+                            <td scope="row" data-label="Account Type">Revenue</td>
+                            <td data-label="Dr">₦842</td>
+                            <td data-label="Cr">₦842</td>
+                            <td data-label="Bal">₦842</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Due Date">02/01/2016</td>
+                            <td scope="row" data-label="Account">Utilities</td>
+                            <td scope="row" data-label="Account Type">Expense</td>
+                            <td data-label="Dr">₦842</td>
+                            <td data-label="Cr">₦842</td>
+                            <td data-label="Bal">₦842</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </main>
+        </section>
+
     </div>
     <script src="/scripts/script.js"></script>
     <script src="/scripts/tables.js"></script>

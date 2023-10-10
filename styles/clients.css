@@ -228,7 +228,7 @@
     display: grid;
     bottom: auto !important;
     gap: 0.5em;
-    transform: translateY(-300%);
+    transform: translateY(-190%);
 }
 
 @media screen and (max-width: 768px) {

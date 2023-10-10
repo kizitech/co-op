@@ -1,4 +1,4 @@
-.shares-section {
+.user-section {
     position: relative;
     background: #FFF;
     min-height: 100vh;
@@ -9,12 +9,12 @@
     z-index: 2;
 }
 
-.sidebar.open~.shares-section {
+.sidebar.open~.user-section {
     left: 250px;
     width: calc(100% - 250px);
 }
 
-.shares-section .text {
+.user-section .text {
     display: inline-block;
     color: #756e0d;
     font-size: 25px;
