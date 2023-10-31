@@ -1,0 +1,54 @@
+{
+  "data": [
+    {
+      "id": "1",
+      "name": "Emmanuel Okeke",
+      "date": "04/01/2016",
+      "principal": "Common Stock",
+      "payment": "₦235,373",
+      "interest": "₦2,537",
+      "balance": "₦1,190",
+      "cumulative interest": "₦1,190"
+    },
+    {
+      "id": "2",
+      "name": "Grace Johnson",
+      "date": "11/15/2017",
+      "principal": "Preferred Stock",
+      "payment": "₦323,456",
+      "interest": "₦3,892",
+      "balance": "₦1,543",
+      "cumulative interest": "₦1,543"
+    },
+    {
+      "id": "3",
+      "name": "John Smith",
+      "date": "08/27/2018",
+      "principal": "Common Stock",
+      "payment": "₦178,234",
+      "interest": "₦1,987",
+      "balance": "₦932",
+      "cumulative interest": "₦932"
+    },
+    {
+      "id": "4",
+      "name": "Sarah Williams",
+      "date": "05/09/2019",
+      "principal": "Preferred Stock",
+      "payment": "₦275,678",
+      "interest": "₦2,843",
+      "balance": "₦1,189",
+      "cumulative interest": "₦1,189"
+    },
+    {
+      "id": "5",
+      "name": "Daniel Brown",
+      "date": "02/14/2020",
+      "principal": "Common Stock",
+      "payment": "₦197,890",
+      "interest": "₦2,110",
+      "balance": "₦1,045",
+      "cumulative interest": "₦1,045"
+    }
+  ]
+}

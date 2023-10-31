@@ -3,7 +3,7 @@ let closeBtn = document.querySelector("#btn");
 
 closeBtn.addEventListener("click", () => {
     sidebar.classList.toggle("open");
-    menuBtnChange();//calling the function(optional)
+    menuBtnChange();
 });
 
 // following are the code to change sidebar button(optional)

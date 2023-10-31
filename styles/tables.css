@@ -1,11 +1,11 @@
 .report-table {
     padding: 0 5em;
-    display: flex;
     margin: 0 auto 3em;
+    /* display: flex;
     align-items: center;
     flex-direction: column;
-    min-height: fit-content;
     justify-content: center;
+    min-height: fit-content; */
 }
 
 table {
@@ -42,8 +42,9 @@ table tr.slide-out {
 }
 
 table th {
+    width: 10em;
     font-size: 1em;
-    padding: 2.825em;
+    padding: 2.825em 0;
     text-align: center;
     letter-spacing: .1em;
     border: 1px solid #ddd;
@@ -51,28 +52,135 @@ table th {
 }
 
 table td {
-    padding: 1.625em;
     text-align: center;
     border: 1px solid #ddd;
+    padding: 1.625em 10px !important;
+}
+
+.dataTables_wrapper .dataTables_info {
+    font-size: 1rem;
+    padding-top: 2.755em !important;
+    color: #9E9628 !important;
+}
+
+/* Style the pagination container */
+.dataTables_paginate {
+    text-align: center !important;
+    margin-top: 10px !important;
+}
+
+/* Style the previous and next buttons */
+.paginate_button.previous,
+.paginate_button.next {
+    margin-right: 10px !important;
+    background-color: #9E9628 !important;
+    color: #fff !important;
+    padding: 5px 10px !important;
+    border-radius: 5px !important;
+    text-decoration: none !important;
+}
+
+/* Style the page number buttons */
+.paginate_button {
+    margin-right: 5px !important;
+    color: #9E9628 !important;
+    text-decoration: none !important;
+    padding: 5px 10px !important;
+    border: 1px solid #9E9628 !important;
+    border-radius: 5px !important;
+}
+
+/* Style the current page button */
+.paginate_button.current {
+    background-color: #9E9628 !important;
+    color: #fff !important;
+}
+
+/* Style the ellipsis */
+.ellipsis {
+    padding: 0 10px !important;
+    font-weight: bold !important;
 }
 
 
+/* Style the label */
+.dataTables_length label {
+    color: #333;
+    font-weight: bold;
+    margin-right: 10px;
+}
 
-@media screen and (max-width: 600px) {
+/* Style the select element */
+.dataTables_length select {
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+/* Style the select options */
+.dataTables_length select option {
+    background-color: #fff;
+    color: #333;
+}
+
+/* Style the search input */
+/* Style the label */
+.dataTables_filter label {
+    color: #333;
+    font-weight: bold;
+}
+
+/* Style the search input field */
+.dataTables_filter input[type="search"] {
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 14px;
+    width: 200px;
+}
+
+/* Adjust placeholder text style */
+.dataTables_filter input[type="search"]::placeholder {
+    color: #999;
+    /* Placeholder text color */
+}
+
+
+.dataTables_wrapper {
+
+    padding-right: 2em;
+}
+
+@media screen and (max-width: 70em) {
+
+    .saving .dataTables_wrapper {
+        padding-left: 5em;
+    }
+
+    .savings-section {
+        margin: 0 !important;
+    }
+
+    .dataTables_wrapper {
+        padding-right: 0em;
+    }
 
     .left-arrow {
         font-size: 1.3rem;
     }
 
     .report-table {
-        padding: 0 1em;
+        padding: 0;
     }
 
     table {
         border: 0;
     }
 
-    table thead {
+    table thead,
+    table tfoot {
         border: none;
         clip: rect(0 0 0 0);
         height: 1px;
@@ -81,6 +189,12 @@ table td {
         padding: 0;
         position: absolute;
         width: 1px;
+    }
+
+    tbody {
+        gap: 3em;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(20em, 1fr));
     }
 
     table tr {
@@ -97,8 +211,8 @@ table td {
     }
 
     table td::before {
-    /* aria-label has no advantage, it won't be read inside a table */
-    content: attr(aria-label);
+        /* aria-label has no advantage, it won't be read inside a table */
+        content: attr(aria-label);
 
         content: attr(data-label);
         float: left;

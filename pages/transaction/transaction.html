@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CO-OP Financial Services — Quick Transaction</title>
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="/pages/transaction/transaction.css">
+</head>
+
+<body>
+    <section class="transaction-card__container">
+        <div class="transaction-card">
+            <div class="transaction-card__title">
+                <h1 class="transaction-card__title-text">Quick Transaction</h1>
+            </div>
+            <div class="transaction-card__content">
+                <div class="transaction-card__text">
+                    <p class="transaction-card__text-label">Make transaction easily from here.</p>
+                    <span class="transaction-card__text-description" id="transaction-time"></span>
+                </div>
+                <div class="transaction-card__form">
+                    <form class="transaction-card__form-form" action="" method="post">
+                        <label for="monthly-saving" class="quick-transaction__label">Monthly Savings</label>
+                        <input type="number" name="monthly-saving" id="monthly-saving"
+                            class="transaction-card__input">
+                        <label for="shares-units" class="quick-transaction__label">Shares Units</label>
+                        <div style="position: relative;">
+                            <input type="number" name="shares" id="shares-units" class="transaction-card__input">
+                            <p class="share-holding-amount" id="share-amount"></p>
+                        </div>
+                        <div class="transaction-card__submit">
+                            <input type="submit" value="Submit" class="transaction-card__submit-button">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="/pages/transaction/transaction.js"></script>
+</body>
+
+</html>

@@ -10,11 +10,11 @@
     <link rel="stylesheet" href="/styles/style.css">
     <link rel="stylesheet" href="/styles/info.css">
     <link rel="stylesheet" href="/styles/modal.css">
-    <link rel="stylesheet" href="/styles/clients.css">
     <link rel="stylesheet" href="/styles/checkbox.css">
     <link rel="stylesheet" href="styles/backToTop.css">
+    <link rel="stylesheet" href="/styles/terms.css">
+    <link rel="stylesheet" href="/styles/forgotEmail.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
     <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
 </head>
 
@@ -34,88 +34,215 @@
                     </div>
                 </div>
                 <ul class="header__nav-list" id="nav__list">
-                    <li class="header__nav-item"><a href="/index.html" class="header__nav-link">Home</a></li>
-                    <li class="header__nav-item"><a href="/index.html" class="header__nav-link">About</a></li>
-                    <li class="header__nav-item"><a href="/index.html" class="header__nav-link">Admistration</a></li>
+                    <li class="header__nav-item"><a href="#home" class="header__nav-link">Home</a></li>
+                    <li class="header__nav-item"><a href="#about" class="header__nav-link">About</a></li>
                     <li class="header__nav-item"><a href="/index.html" class="header__nav-link"><span
                                 class="header__nav-logo">CO-OP</span></a></li>
-                    <li class="header__nav-item"><a href="/index.html" class="header__nav-link">Journals</a></li>
-                    <li class="header__nav-item"><a href="/index.html" class="header__nav-link">Report</a></li>
-                    <li class="header__nav-item"><a href="/index.html" class="header__nav-link">News</a></li>
+                    <li class="header__nav-item"><a href="#services" class="header__nav-link">Services</a></li>
+                    <li class="header__nav-item"><a href="/index.html" class="header__nav-link">Admistration</a></li>
                 </ul>
             </nav>
         </header>
-        <main>
-            <section class="hero">
-                <form action="" method="post" id="membership-form"data-aos="zoom-in">
-                    <div class="form__heading">
-                        <h1 class="form__title">Membership Status Options!</h1>
-                    </div>
-                    <div class="cntr">
-                        <input type="checkbox" id="cbx" class="hidden-xs-up">
-                        <label for="cbx" class="cbx"></label>
-                        <span>new member</span>
-                    </div>
-                    <div class="cntr">
-                        <input type="checkbox" id="cbxx" class="hidden-xs-up">
-                        <label for="cbxx" class="cbxx"></label>
-                        <span>old member</span>
-                    </div>
-                    <div class="form__field-info" id="form__field-info" data-aos="flip-down">
-                        <div class="form__group field">
-                            <input type="number" name="memberNo" class="form__field" placeholder="Name" required="">
-                            <label for="memberNo" class="form__label">membership number</label>
+        <main id="CrossFade">
+            <!-- HERO BACKGROUND IMAGES -->
+            <img src="/images/slider-1.jpeg" alt="img" />
+            <img src="/images/slider-2.jpg" alt="img" />
+            <img src="/images/slider-3.jpg" alt="img" />
+            <img src="/images/slider-4.jpg" alt="img" />
+            <div>
+                <section class="hero" id="home">
+                    <form action="" method="post" id="membership-form" data-aos="zoom-in">
+                        <div class="form__heading">
+                            <h1 class="form__title">Membership Status Options!</h1>
                         </div>
-                        <div class="form__submit">
-                            <button type="submit" name="submit">Submit</button>
+                        <div class="cntr">
+                            <input type="checkbox" id="cbx" class="hidden-xs-up">
+                            <label for="cbx" class="cbx"></label>
+                            <span>new member</span>
                         </div>
-                        <div class="forgot__number">
-                            <a href="#" class="forgot__number-link">Forgot number?</a>
+                        <div class="cntr">
+                            <input type="checkbox" id="cbxx" class="hidden-xs-up">
+                            <label for="cbxx" class="cbxx"></label>
+                            <span>old member</span>
                         </div>
-                        <div class="verification__detail">
-                            <p class="error"></p>
-                            <p class="success"></p>
+
+                        <!-- OLD MEMBER MODAL -->
+                        <div class="form__field-info" id="form__field-info" data-aos="flip-down">
+                            <div class="form__group field">
+                                <input type="number" name="memberNo" class="form__field" placeholder="Name" required="">
+                                <label for="memberNo" class="form__label">membership number</label>
+                            </div>
+                            <div class="form__submit">
+                                <button type="submit" name="submit">Submit</button>
+                            </div>
+
+                            <!-- ... (forgot number) -->
+                            
+                            <div class="forgot">
+                                <button type="button" class="forgot__number-button" id="forgotOpenModal">Forgot number?</button>
+                            </div>
                         </div>
-                    </div>
-                </form>
-            </section>
+                    </form>
+                </section>
+            </div>
         </main>
 
+        <!-- ... (forgot pop up modal) -->
+        
+        <div id="forgotModal" class="forgot__modal">
+            <div class="forgot__modal-content">
+                <span class="forgot__modal-close" id="closeModal">&times;</span>
+                <h2 class="forgot__modal-title">Forgot Number</h2>
+                <p class="forgot__modal-text">Please enter your Surname:</p>
+                <input type="email" id="emailInput" class="forgot__modal-input">
+                <button id="submitEmail" class="forgot__modal-button">Submit</button>
+            </div>
+        </div>
+
+        <!-- NEW MEMBER POPUP MODAL -->
         <section class="modal-section">
             <div id="myModal" class="modal">
                 <form action="" method="post" class="modal-content">
                     <span class="close modal-close"><iconify-icon icon="ri:close-line"></iconify-icon></span>
                     <h2 class="modal-title">Create Account</h2>
                     <div class="modal-input-group">
-                        <input type="text" name="first name" placeholder="First Name" id="" class="modal-input">
-                        <input type="text" name="last name" placeholder="Last Name" id="" class="modal-input">
-                        <input type="tel" name="phone number" placeholder="Phone Number" id="" class="modal-input">
-                        <input type="email" name="email" placeholder="Email" id="" class="modal-input">
-                        <input type="text" name="next of kin" placeholder="Next of Kin" id="" class="modal-input">
-                        <input type="number" name="monthly saving" placeholder="Monthly Saving" id=""
-                            class="modal-input">
+                        <input type="text" name="surname" placeholder="Surname" id="" class="modal-input" required>
+                        <input type="text" name="other name" placeholder="Other Name" id="" class="modal-input"
+                            required>
+                        <input type="tel" name="phone number" placeholder="Phone Number" id="" class="modal-input"
+                            required>
+                        <input type="email" name="email" placeholder="Email" id="" class="modal-input" required>
+                        <input type="text" name="next of kin" placeholder="Next of Kin" id="" class="modal-input"
+                            required>
+                        <input type="text" name="mda" placeholder="Ministry Department Agency (MDA)" id=""
+                            class="modal-input" required>
+                        <div class="modal-input passport-image">
+                            <label for="passport" class="loader">
+                                <input type="file" name="passport" id="passport" class="modal-input" required onchange="updateImageStatus()">
+                            </label>
+                            <span id="imageStatus">Please Insert a Passport Image</span>
+                        </div>
                         <label for="dateOfBirth" class="modal-label">Date of Birth</label>
-                        <input type="date" name="date of birth" id="dateOfBirth" class="modal-input">
+                        <input type="date" name="date of birth" id="dateOfBirth" class="modal-input" required>
+                        <label for="dateJoined" class="modal-label">Date Joined</label>
+                        <input type="date" name="date of birth" id="dateJoined" class="modal-input" required>
                     </div>
                     <div class="modal-options">
                         <div class="cntr modal-checkbox">
                             <input type="checkbox" id="cbxxx" class="hidden-xs-up modal-checkbox-input">
                             <label for="cbxxx" class="cbxxx modal-checkbox-label"></label>
                         </div>
-                        <p class="modal-terms">I agree to the <a href="#" class="modal-terms-link">Terms &
-                                Conditions</a> of the
+                        <p class="modal-terms">I agree to the <button type="button" id="terms-and-conditions">Terms &
+                                Conditions</button> of the
                             <span>CO-OP</span> co.
                         </p>
                     </div>
                     <div class="modal-button">
-                        <input type="submit" value="Submit" class="modal-submit-button">
+                        <a href="/pages/transaction/transaction.html"
+                            class="modal-submit-button"><span>Continue</span><iconify-icon class="continue__right-arrow"
+                                icon="octicon:chevron-up-12"></iconify-icon></a>
                     </div>
                 </form>
             </div>
         </section>
 
+        <!-- TERMS AND CONDITION -->
+        <section class="terms" id="terms">
+            <article class="terms-container">
+                <header class="terms-container-header">
+                    <span class="terms-container-title">
+                        <svg aria-hidden="true" height="24" width="24" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 0h24v24H0z" fill="none"></path>
+                            <path
+                                d="M14 9V4H5v16h6.056c.328.417.724.785 1.18 1.085l1.39.915H3.993A.993.993 0 0 1 3 21.008V2.992C3 2.455 3.449 2 4.002 2h10.995L21 8v1h-7zm-2 2h9v5.949c0 .99-.501 1.916-1.336 2.465L16.5 21.498l-3.164-2.084A2.953 2.953 0 0 1 12 16.95V11zm2 5.949c0 .316.162.614.436.795l2.064 1.36 2.064-1.36a.954.954 0 0 0 .436-.795V13h-5v3.949z"
+                                fill="currentColor"></path>
+                        </svg>
+                        Terms and Services
+                    </span>
+                    <button class="icon-button" id="terms-close__btn">
+                        <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 0h24v24H0z" fill="none"></path>
+                            <path
+                                d="M12 10.586l4.95-4.95 1.414 1.414-4.95 4.95 4.95 4.95-1.414 1.414-4.95-4.95-4.95 4.95-1.414-1.414 4.95-4.95-4.95-4.95L7.05 5.636z"
+                                fill="currentColor"></path>
+                        </svg>
+                    </button>
+                </header>
 
-        <section class="coop-section" data-aos="fade-in">
+                <!-- TERMS AND CONDITIONS CONTENT -->
+                <section class="terms-container-body rtf">
+                    <span>Quarum ambarum rerum cum medicinam pollicetur, luxuriae licentiam pollicetur.</span>
+
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Unum nescio, quo modo possit, si
+                        luxuriosus sit,
+                        finitas cupiditates habere. Hoc est non modo cor non habere, sed ne palatum quidem. Sic, et
+                        quidem
+                        diligentius saepiusque ista loquemur inter nos agemusque communiter. Paulum, cum regem Persem
+                        captum
+                        adduceret, eodem flumine invectio? Quid igitur dubitamus in tota eius natura quaerere quid sit
+                        effectum?
+                        Duo Reges: constructio interrete. </p>
+
+                    <span>Ut proverbia non nulla veriora sint quam vestra dogmata.</span>
+
+                    <p>Quasi vero, inquit, perpetua oratio rhetorum solum, non etiam philosophorum sit. Tria genera
+                        cupiditatum,
+                        naturales et necessariae, naturales et non necessariae, nec naturales nec necessariae. Sin aliud
+                        quid
+                        voles, postea. Consequatur summas voluptates non modo parvo, sed per me nihilo, si potest; </p>
+
+                    <span>An hoc usque quaque, aliter in vita?</span>
+                    <ol>
+                        <li>Etenim nec iustitia nec amicitia esse omnino poterunt, nisi ipsae per se expetuntur.</li>
+                        <li>Pisone in eo gymnasio, quod Ptolomaeum vocatur, unaque nobiscum Q.</li>
+                        <li>Certe nihil nisi quod possit ipsum propter se iure laudari.</li>
+                        <li>Itaque e contrario moderati aequabilesque habitus, affectiones ususque corporis apti esse ad
+                            naturam
+                            videntur.</li>
+                    </ol>
+
+                    <span>Claudii libidini, qui tum erat summo ne imperio, dederetur.</span>
+
+                    <p>Eorum enim est haec querela, qui sibi cari sunt seseque diligunt. Cum audissem Antiochum, Brute,
+                        ut
+                        solebam, cum M. An obliviscimur, quantopere in audiendo in legendoque moveamur, cum pie, cum
+                        amice, cum
+                        magno animo aliquid factum cognoscimus? Qui igitur convenit ab alia voluptate dicere naturam
+                        proficisci,
+                        in alia summum bonum ponere? Magni enim aestimabat pecuniam non modo non contra leges, sed etiam
+                        legibus
+                        partam. Haec mirabilia videri intellego, sed cum certe superiora firma ac vera sint, his autem
+                        ea
+                        consentanea et consequentia, ne de horum quidem est veritate dubitandum. At, illa, ut vobis
+                        placet,
+                        partem quandam tuetur, reliquam deserit. Sed utrum hortandus es nobis, Luci, inquit, an etiam
+                        tua sponte
+                        propensus es? Sed est forma eius disciplinae, sicut fere ceterarum, triplex: una pars est
+                        naturae,
+                        disserendi altera, vivendi tertia. Nemo enim est, qui aliter dixerit quin omnium naturarum
+                        simile esset
+                        id, ad quod omnia referrentur, quod est ultimum rerum appetendarum. Quid est, quod ab ea absolvi
+                        et
+                        perfici debeat? Quod cum accidisset ut alter alterum necopinato videremus, surrexit statim.
+                        Tantum dico,
+                        magis fuisse vestrum agere Epicuri diem natalem, quam illius testamento cavere ut ageretur. Quod
+                        iam a
+                        me expectare noli. Quod totum contra est. Semper enim ita adsumit aliquid, ut ea, quae prima
+                        dederit,
+                        non deserat. </p>
+
+                    <span>Sed nimis multa.</span>
+
+                </section>
+                <footer class="terms-container-footer">
+                    <button class="button is-primary" id="accepts__terms-close__btn">Accept</button>
+                </footer>
+            </article>
+        </section>
+
+        <!-- ABOUT US SECTION -->
+        <section class="coop-section" id="about" data-aos="fade-in">
             <div class="coop-section__content">
                 <div class="coop-section__heading">
                     <h2 class="coop-section__title">About CO-OP</h2>
@@ -132,6 +259,7 @@
             </div>
         </section>
 
+        <!-- OUR MISSION SECTION -->
         <section class="coop-section" data-aos="fade-in">
             <div class="coop-section__content">
                 <div class="coop-section__heading">
@@ -148,6 +276,7 @@
             </div>
         </section>
 
+        <!-- WHY CHOOSE US SECTION -->
         <section class="coop-section" data-aos="fade-in">
             <div class="coop-section__content">
                 <div class="coop-section__heading">
@@ -175,15 +304,15 @@
             </div>
         </section>
 
-
-        <section class="timeline__section" id="timeline">
+        <!-- SERVICES SECTION -->
+        <section class="timeline__section" id="services">
             <div class="timeline__heading__box">
                 <h2 class="timeline__heading__text">Our Services</h2>
             </div>
 
             <div class="timeline__text__box">
                 <div class="timeline__boxes">
-                    <div class="timeline__box-l"data-aos="fade-in"11 >
+                    <div class="timeline__box-l" data-aos="fade-in" 11>
                         <h3 class="timeline__text__heading-r">Investing:</h3>
                         <p class="timeline__text">
                             CO-OP offers a wide range of investment options designed to help you grow your wealth.
@@ -199,7 +328,7 @@
                     <h3 class="timeline__text__heading-r">Financial Security</h3>
                     <p class="timeline__number">2</p>
 
-                    <div class="timeline__box-r"data-aos="zoom-in">
+                    <div class="timeline__box-r" data-aos="zoom-in">
                         <h3 class="timeline__text__heading-l">Savings:</h3>
                         <p class="timeline__text">
                             Building a financial safety net is crucial for achieving your goals. Our savings accounts
@@ -209,7 +338,7 @@
                     </div>
                 </div>
                 <div class="timeline__boxes">
-                    <div class="timeline__box-l"data-aos="zoom-in">
+                    <div class="timeline__box-l" data-aos="zoom-in">
                         <h3 class="timeline__text__heading-r">Loaning:</h3>
                         <p class="timeline__text">
                             When life presents opportunities or challenges that require financial support, CO-OP is here
@@ -224,7 +353,7 @@
                     <h3 class="timeline__text__heading-r">Community Prosperity</h3>
                     <p class="timeline__number">4</p>
 
-                    <div class="timeline__box-r"data-aos="zoom-in">
+                    <div class="timeline__box-r" data-aos="zoom-in">
                         <h3 class="timeline__text__heading-l">Shareholding:</h3>
                         <p class="timeline__text">
                             As a cooperative, we encourage our members to become shareholders, sharing in the success
@@ -234,7 +363,7 @@
                     </div>
                 </div>
                 <div class="timeline__boxes">
-                    <div class="timeline__box-l"data-aos="zoom-in">
+                    <div class="timeline__box-l" data-aos="zoom-in">
                         <h3 class="timeline__text__heading-r">Retirement Planning:</h3>
                         <p class="timeline__text">
                             Planning for a secure and comfortable retirement is essential. CO-OP provides retirement
@@ -251,7 +380,7 @@
                     <h3 class="timeline__text__heading-r">Asset Protection</h3>
                     <p class="timeline__number">6</p>
 
-                    <div class="timeline__box-r"data-aos="zoom-in">
+                    <div class="timeline__box-r" data-aos="zoom-in">
                         <h3 class="timeline__text__heading-l">Insurance Services:</h3>
                         <p class="timeline__text">
                             Protecting your assets and loved ones is paramount. CO-OP offers a range of insurance
@@ -264,113 +393,7 @@
             </div>
         </section>
 
-        <section class="review">
-            <div class="review__title">
-                <h1 class="review__title-text">Clients Reviews</h1>
-            </div>
-            <div class="blog-slider">
-                <div class="blog-slider__wrp swiper-wrapper">
-                    <!-- Princess Akachi's Review -->
-                    <div class="blog-slider__item swiper-slide">
-                        <div class="blog-slider__img">
-                            <img src="/images/testimonial1.jpg" alt="princess-akachi">
-                        </div>
-                        <div class="blog-slider__content">
-                            <span class="blog-slider__code">05 March 2023</span>
-                            <div class="blog-slider__title">Princess Akachi</div>
-                            <div class="blog-slider__text">
-                                <q>CO-OP makes saving a breeze. I love how user-friendly it is, and the automatic
-                                    savings feature helps me reach my financial goals effortlessly.</q>
-                            </div>
-                            <a href="#membership-form" class="blog-slider__button">Easy Savings with CO-OP!</a>
-                        </div>
-                    </div>
-
-                    <!-- Leon Obasi's Review -->
-                    <div class="blog-slider__item swiper-slide">
-                        <div class="blog-slider__img">
-                            <img src="/images/testimonial2.jpg" alt="leon-obasi">
-                        </div>
-                        <div class="blog-slider__content">
-                            <span class="blog-slider__code">26 June 2023</span>
-                            <div class="blog-slider__title">Leon Obasi</div>
-                            <div class="blog-slider__text">
-                                <q>CO-OP is perfect for beginners like me. It's straightforward to invest, and
-                                    I've watched my money grow steadily. Plus, the loan option is handy in a pinch!</q>
-                            </div>
-                            <a href="#membership-form" class="blog-slider__button">Investing Made Simple!</a>
-                        </div>
-                    </div>
-
-                    <!-- Ayo Ogunseinde's Review -->
-                    <div class="blog-slider__item swiper-slide">
-                        <div class="blog-slider__img">
-                            <img src="/images/testimonial3.jpg" alt="ayo-ogunseinde">
-                        </div>
-                        <div class="blog-slider__content">
-                            <span class="blog-slider__code">14 July 2023</span>
-                            <div class="blog-slider__title">Ayo Ogunseinde</div>
-                            <div class="blog-slider__text">
-                                <q>CO-OP is perfect for beginners like me. It's straightforward to invest, and
-                                    I've watched my money grow steadily. Plus, the loan option is handy in a pinch!</q>
-                            </div>
-                            <a href="#membership-form" class="blog-slider__button">Investing Made Simple!</a>
-                        </div>
-                    </div>
-
-                    <!-- Rodney Adewale's Review -->
-                    <div class="blog-slider__item swiper-slide">
-                        <div class="blog-slider__img">
-                            <img src="/images/testimonial4.jpg" alt="rodney-adewale">
-                        </div>
-                        <div class="blog-slider__content">
-                            <span class="blog-slider__code">11 August 2023</span>
-                            <div class="blog-slider__title">Rodney Adewale</div>
-                            <div class="blog-slider__text">
-                                <q>CO-OP simplifies shareholding. I can buy and manage shares
-                                    easily. Real-time updates and loan access make it a must-have financial tool.</q>
-                            </div>
-                            <a href="#membership-form" class="blog-slider__button">Shareholding Made Easy!</a>
-                        </div>
-                    </div>
-
-                    <!-- Patience Nnamdi's Review -->
-                    <div class="blog-slider__item swiper-slide">
-                        <div class="blog-slider__img">
-                            <img src="/images/testimonial5.jpg" alt="patience-nnamdi">
-                        </div>
-                        <div class="blog-slider__content">
-                            <span class="blog-slider__code">9 September 2023</span>
-                            <div class="blog-slider__title">Patience Nnamdi</div>
-                            <div class="blog-slider__text">
-                                <q>CO-OP simplifies shareholding. I can buy and manage shares
-                                    easily. Real-time updates and loan access make it a must-have financial tool.</q>
-                            </div>
-                            <a href="#membership-form" class="blog-slider__button">Shareholding Made Easy!</a>
-                        </div>
-                    </div>
-
-                    <!-- Daniel Olaruwaju's Review -->
-                    <div class="blog-slider__item swiper-slide">
-                        <div class="blog-slider__img">
-                            <img src="/images/testimonial6.jpg" alt="daniel-olaruwaju">
-                        </div>
-                        <div class="blog-slider__content">
-                            <span class="blog-slider__code">10 October 2023</span>
-                            <div class="blog-slider__title">Daniel Olaruwaju</div>
-                            <div class="blog-slider__text">
-                                <q>CO-OP simplifies shareholding. I can buy and manage shares
-                                    easily. Real-time updates and loan access make it a must-have financial tool.</q>
-                            </div>
-                            <a href="#membership-form" class="blog-slider__button">Shareholding Made Easy!</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="blog-slider__pagination"></div>
-            </div>
-        </section>
-
-
+        <!-- FREQUENTLY ASKED QUESTION -->
         <div class="container">
             <h2>Frequently Asked Questions</h2>
             <div class="accordion">
@@ -486,24 +509,26 @@
             </div>
         </div>
 
+        <!-- BACK TO TOP -->
         <button class="scrollToTopBtn" title="Back To Top"><iconify-icon icon="bxs:chevron-up"></iconify-icon></button>
 
+        <!-- FOOTER SECTION -->
         <footer class="footer">
             <div class="social__icons">
                 <a href="/index.html" title="Twitter"><iconify-icon icon="mingcute:social-x-line"></iconify-icon></a>
-                <a href="/index.html" title="Telegram"></a><iconify-icon icon="basil:telegram-solid"></iconify-icon></a>
-                <a href="/index.html" title="Linkedin"></a><iconify-icon icon="ri:linkedin-fill"></iconify-icon></a>
-                <a href="/index.html" title="Facebook"></a><iconify-icon icon="gg:facebook"></iconify-icon></a>
+                <a href="/index.html" title="Telegram"><iconify-icon icon="basil:telegram-solid"></iconify-icon></a>
+                <a href="/index.html" title="Linkedin"><iconify-icon icon="ri:linkedin-fill"></iconify-icon></a>
+                <a href="/index.html" title="Facebook"><iconify-icon icon="gg:facebook"></iconify-icon></a>
             </div>
             <p class="copyright">© 2023 <span>CO-OP</span> All rights reserved.</p>
         </footer>
     </div>
     <script src="/scripts/faq.js"></script>
+    <script src="/scripts/terms.js"></script>
     <script src="/scripts/modal.js"></script>
     <script src="/scripts/script.js"></script>
     <script src="/scripts/backToTop.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-    <script src="/scripts/clients.js"></script>
+    <script src="/scripts//forgotEmail.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
         AOS.init({

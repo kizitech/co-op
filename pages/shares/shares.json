@@ -1,0 +1,207 @@
+{
+  "data": [
+    {
+      "id": "1",
+      "name of shareholder": "Shareholder A",
+      "value of holdings": "₦8,634,654",
+      "share holdings (units)": "120",
+      "% of holding": "9.6%"
+    },
+    {
+      "id": "2",
+      "name of shareholder": "Shareholder B",
+      "value of holdings": "₦12,545,768",
+      "share holdings (units)": "180",
+      "% of holding": "14.3%"
+    },
+    {
+      "id": "3",
+      "name of shareholder": "Shareholder C",
+      "value of holdings": "₦6,987,432",
+      "share holdings (units)": "98",
+      "% of holding": "7.8%"
+    },
+    {
+      "id": "4",
+      "name of shareholder": "Shareholder D",
+      "value of holdings": "₦4,324,567",
+      "share holdings (units)": "60",
+      "% of holding": "4.8%"
+    },
+    {
+      "id": "5",
+      "name of shareholder": "Shareholder E",
+      "value of holdings": "₦17,653,879",
+      "share holdings (units)": "245",
+      "% of holding": "19.6%"
+    },
+    {
+      "id": "2",
+      "name of shareholder": "Shareholder B",
+      "value of holdings": "₦12,545,768",
+      "share holdings (units)": "180",
+      "% of holding": "14.3%"
+    },
+    {
+      "id": "3",
+      "name of shareholder": "Shareholder C",
+      "value of holdings": "₦6,987,432",
+      "share holdings (units)": "98",
+      "% of holding": "7.8%"
+    },
+    {
+      "id": "4",
+      "name of shareholder": "Shareholder D",
+      "value of holdings": "₦4,324,567",
+      "share holdings (units)": "60",
+      "% of holding": "4.8%"
+    },
+    {
+      "id": "5",
+      "name of shareholder": "Shareholder E",
+      "value of holdings": "₦17,653,879",
+      "share holdings (units)": "245",
+      "% of holding": "19.6%"
+    },
+    {
+      "id": "2",
+      "name of shareholder": "Shareholder B",
+      "value of holdings": "₦12,545,768",
+      "share holdings (units)": "180",
+      "% of holding": "14.3%"
+    },
+    {
+      "id": "3",
+      "name of shareholder": "Shareholder C",
+      "value of holdings": "₦6,987,432",
+      "share holdings (units)": "98",
+      "% of holding": "7.8%"
+    },
+    {
+      "id": "4",
+      "name of shareholder": "Shareholder D",
+      "value of holdings": "₦4,324,567",
+      "share holdings (units)": "60",
+      "% of holding": "4.8%"
+    },
+    {
+      "id": "5",
+      "name of shareholder": "Shareholder E",
+      "value of holdings": "₦17,653,879",
+      "share holdings (units)": "245",
+      "% of holding": "19.6%"
+    },
+    {
+      "id": "2",
+      "name of shareholder": "Shareholder B",
+      "value of holdings": "₦12,545,768",
+      "share holdings (units)": "180",
+      "% of holding": "14.3%"
+    },
+    {
+      "id": "3",
+      "name of shareholder": "Shareholder C",
+      "value of holdings": "₦6,987,432",
+      "share holdings (units)": "98",
+      "% of holding": "7.8%"
+    },
+    {
+      "id": "4",
+      "name of shareholder": "Shareholder D",
+      "value of holdings": "₦4,324,567",
+      "share holdings (units)": "60",
+      "% of holding": "4.8%"
+    },
+    {
+      "id": "5",
+      "name of shareholder": "Shareholder E",
+      "value of holdings": "₦17,653,879",
+      "share holdings (units)": "245",
+      "% of holding": "19.6%"
+    },
+    {
+      "id": "2",
+      "name of shareholder": "Shareholder B",
+      "value of holdings": "₦12,545,768",
+      "share holdings (units)": "180",
+      "% of holding": "14.3%"
+    },
+    {
+      "id": "3",
+      "name of shareholder": "Shareholder C",
+      "value of holdings": "₦6,987,432",
+      "share holdings (units)": "98",
+      "% of holding": "7.8%"
+    },
+    {
+      "id": "4",
+      "name of shareholder": "Shareholder D",
+      "value of holdings": "₦4,324,567",
+      "share holdings (units)": "60",
+      "% of holding": "4.8%"
+    },
+    {
+      "id": "5",
+      "name of shareholder": "Shareholder E",
+      "value of holdings": "₦17,653,879",
+      "share holdings (units)": "245",
+      "% of holding": "19.6%"
+    },
+    {
+      "id": "2",
+      "name of shareholder": "Shareholder B",
+      "value of holdings": "₦12,545,768",
+      "share holdings (units)": "180",
+      "% of holding": "14.3%"
+    },
+    {
+      "id": "3",
+      "name of shareholder": "Shareholder C",
+      "value of holdings": "₦6,987,432",
+      "share holdings (units)": "98",
+      "% of holding": "7.8%"
+    },
+    {
+      "id": "4",
+      "name of shareholder": "Shareholder D",
+      "value of holdings": "₦4,324,567",
+      "share holdings (units)": "60",
+      "% of holding": "4.8%"
+    },
+    {
+      "id": "5",
+      "name of shareholder": "Shareholder E",
+      "value of holdings": "₦17,653,879",
+      "share holdings (units)": "245",
+      "% of holding": "19.6%"
+    },
+    {
+      "id": "2",
+      "name of shareholder": "Shareholder B",
+      "value of holdings": "₦12,545,768",
+      "share holdings (units)": "180",
+      "% of holding": "14.3%"
+    },
+    {
+      "id": "3",
+      "name of shareholder": "Shareholder C",
+      "value of holdings": "₦6,987,432",
+      "share holdings (units)": "98",
+      "% of holding": "7.8%"
+    },
+    {
+      "id": "4",
+      "name of shareholder": "Shareholder D",
+      "value of holdings": "₦4,324,567",
+      "share holdings (units)": "60",
+      "% of holding": "4.8%"
+    },
+    {
+      "id": "5",
+      "name of shareholder": "Shareholder E",
+      "value of holdings": "₦17,653,879",
+      "share holdings (units)": "245",
+      "% of holding": "19.6%"
+    }
+  ]
+}

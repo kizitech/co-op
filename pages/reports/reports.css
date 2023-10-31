@@ -1,16 +1,15 @@
 .reports-section {
-    position: relative;
+
     background: #FFF;
     min-height: 100vh;
     top: 0;
-    left: 78px;
-    width: calc(100% - 78px);
+    margin-left: 78px;
     transition: all 0.5s ease;
     z-index: 2;
 }
 
 .sidebar.open~.reports-section {
-    left: 250px;
+    left: 0px;
     width: calc(100% - 250px);
 }
 

@@ -10,9 +10,21 @@
     <link rel="stylesheet" href="/styles/sidebar.css">
     <link rel="stylesheet" href="/styles/navigate.css">
     <link rel="stylesheet" href="/pages/savings/savings.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.4.2/css/buttons.dataTables.min.css">
     <!-- Boxicons CDN Link -->
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://kit.fontawesome.com/7c83eb763b.js" crossorigin="anonymous"></script>
+    
     <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <script defer src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    <script defer src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+    <script defer src="https://cdn.datatables.net/buttons/2.4.2/js/dataTables.buttons.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+    <script defer src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.html5.min.js"></script>
+    <script defer src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.print.min.js"></script>
 </head>
 
 <body>
@@ -32,11 +44,11 @@
                     <span class="tooltip">Dashboard</span>
                 </li>
                 <li>
-                    <a href="/pages/user/user.html">
-                        <i class='bx bx-user'></i>
-                        <span class="links_name">User</span>
+                    <a href="/pages/users/users.html">
+                        <i class="fa-solid fa-users"></i>
+                        <span class="links_name">Users</span>
                     </a>
-                    <span class="tooltip">User</span>
+                    <span class="tooltip">Users</span>
                 </li>
                 <li>
                     <a href="/pages/savings/savings.html" class="active-button">
@@ -66,13 +78,6 @@
                     </a>
                     <span class="tooltip">Report</span>
                 </li>
-                <li>
-                    <a href="/pages/settings/settings.html">
-                        <i class='bx bx-cog'></i>
-                        <span class="links_name">Setting</span>
-                    </a>
-                    <span class="tooltip">Setting</span>
-                </li>
                 <li class="profile">
                     <div class="profile-details">
                         <img src="/images/admin_profile_photo.jpg" alt="profileImg">
@@ -85,8 +90,8 @@
                 </li>
             </ul>
         </div>
+
         <section class="savings-section">
-            <h1 class="text">Savings</h1>
             <div class="navigation__arrows">
                 <div class="navigation__arrows-left" id="go-back" title="Go Back">
                     <iconify-icon class="left-arrow" icon="octicon:chevron-up-12"></iconify-icon>
@@ -100,66 +105,42 @@
 
             <main class="report-table">
 
-                <table>
-                    <caption>Savings: <span>David Kasse</span> </caption>
-                    <thead>
-                        <tr>
-                            <th scope="col">Date</th>
-                            <th scope="col">Particulars</th>
-                            <th scope="col">Account Type</th>
-                            <th scope="col">Dr</th>
-                            <th scope="col">Cr</th>
-                            <th scope="col">Bal</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td data-label="Due Date">03/01/2016</td>
-                            <td scope="row" data-label="Particulars">Cash</td>
-                            <td scope="row" data-label="Account Type">Asset</td>
-                            <td data-label="Dr">₦2,443</td>
-                            <td data-label="Cr">₦2,443</td>
-                            <td data-label="Bal">₦2,443</td>
-                        </tr>
-                        <tr>
-                            <td data-label="Due Date">04/01/2016</td>
-                            <td scope="row" data-label="Particulars">Common Stock</td>
-                            <td scope="row" data-label="Account Type">Equity</td>
-                            <td data-label="Dr">₦1,190</td>
-                            <td data-label="Cr">₦1,190</td>
-                            <td data-label="Bal">₦1,190</td>
-                        </tr>
-                        <tr>
-                            <td data-label="Due Date">03/01/2016</td>
-                            <td scope="row" data-label="Particulars">Payroll Payable</td>
-                            <td scope="row" data-label="Account Type">Liability</td>
-                            <td data-label="Dr">₦1,181</td>
-                            <td data-label="Cr">₦1,181</td>
-                            <td data-label="Bal">₦1,181</td>
-                        </tr>
-                        <tr>
-                            <td data-label="Due Date">02/01/2016</td>
-                            <td scope="row" data-label="Account">Revenue</td>
-                            <td scope="row" data-label="Account Type">Revenue</td>
-                            <td data-label="Dr">₦842</td>
-                            <td data-label="Cr">₦842</td>
-                            <td data-label="Bal">₦842</td>
-                        </tr>
-                        <tr>
-                            <td data-label="Due Date">02/01/2016</td>
-                            <td scope="row" data-label="Account">Utilities</td>
-                            <td scope="row" data-label="Account Type">Expense</td>
-                            <td data-label="Dr">₦842</td>
-                            <td data-label="Cr">₦842</td>
-                            <td data-label="Bal">₦842</td>
-                        </tr>
-                    </tbody>
-                </table>
+                    <div class="container saving">
+                    
+                        <table id="example" class="display" style="width:100%">
+                           <caption>Savings:</caption>
+                            <thead>
+                                <tr>
+                                    <th scope="col">Names</th>
+                                    <th scope="col">Date</th>
+                                    <th scope="col">Particulars</th>
+                                    <th scope="col">Dividend</th>
+                                    <th scope="col">Cr</th>
+                                    <th scope="col">Dr</th>
+                                    <th scope="col">Bal</th>
+                                </tr>
+                            </thead>
+                            <tfoot>
+                                <tr>
+                                    <th scope="col">Names</th>
+                                    <th scope="col">Date</th>
+                                    <th scope="col">Particulars</th>
+                                    <th scope="col">Dividend</th>
+                                    <th scope="col">Cr</th>
+                                    <th scope="col">Dr</th>
+                                    <th scope="col">Bal</th>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
             </main>
+
+            <!-- FUNCTIONAL TABLE -->
+            
         </section>
 
     </div>
-    <script src="/scripts/script.js"></script>
+    <script defer src="/pages/savings/savings.js"></script>
     <script src="/scripts/tables.js"></script>
     <script src="/scripts/navigate.js"></script>
 </body>

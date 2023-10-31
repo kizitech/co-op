@@ -4,8 +4,7 @@
 }
 
 .personal-info__header {
-    padding: 0 13%;
-    margin-bottom: -2em;
+    padding: 0 3em;
 }
 
 .personal-info__title {
@@ -23,14 +22,14 @@
 
 .user-profile__info {
     gap: 3em;
-    width: 70%;
-    margin: 5em;
-    padding: 3.5em;
+    width: 80%;
+    margin: 2.5em;
     display: flex;
     flex-wrap: wrap;
+    padding: 2.5em 0;
     align-items: center;
-    justify-content: center;
     border: 1px solid #9b9b9b;
+    justify-content: space-around;
 }
 
 .user-profile__info-heading {
@@ -46,10 +45,15 @@
 .user-profile__details-list {
     gap: 2em;
     display: grid;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    grid-template-columns: 1fr 1fr;
+
+    /* grid-template-columns: 1fr 1fr; */
+}
+
+.user-profile__details-list li {
+    gap: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .user-profile__details-list h2 {
@@ -66,21 +70,9 @@
 }
 
 .user-profile__photo-image {
-    width: 12em;
-    height: 12em;
+    height: 25em;
     object-fit: cover;
     object-position: center;
-}
-
-.user-profile__photo-details {
-    gap: 0.5em;
-    display: flex;
-    font-size: 0.9rem;
-    align-items: center;
-}
-
-.user-profile__photo-value {
-    color: #9E9628;
 }
 
 
@@ -94,15 +86,18 @@
 }
 
 .report-section__items {
-    display: grid;
-    width: 80%;
+    gap: 2em;
+    width: 100%;
+    display: flex;
+    margin: 2em 0;
+    flex-wrap: wrap;
     align-items: center;
-    margin-bottom: 4em;
     justify-content: center;
-    grid-template-columns: repeat(3, 1fr);
 }
 
 .report-item {
+    width: 100%;
+    max-width: 13em;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -112,12 +107,13 @@
     gap: 0.5em;
     color: #fff;
     display: flex;
+    width: 100%;
+    padding: 2.5em 1.3em;
     align-items: center;
     border-radius: 0.5em;
-    padding: 0.5em 2.5em;
     flex-direction: column;
     justify-content: center;
-    transition: background 250ms ease;
+    transition: background 500ms ease;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
     background-image: linear-gradient(147deg, #9E9628 0%, #756e0d 74%);
 }
@@ -127,6 +123,21 @@
     background: rgb(2, 0, 36);
 }
 
+.report-item__heading {
+    gap: 1em;
+    display: flex;
+    padding: 1em 0;
+    place-items: center;
+}
+
+.report-item__category {
+    text-transform: uppercase;
+}
+
 .report-item__button span {
     font-weight: 600;
+}
+
+.report-item__button h3 {
+    font-size: 0.5rem;
 }

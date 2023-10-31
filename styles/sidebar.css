@@ -17,8 +17,14 @@
     background: #756e0d;
     padding: 6px 14px;
     z-index: 99;
-    /* overflow: auto; */
     transition: all 0.5s ease;
+    box-shadow: 2px 2px 1em #888;
+}
+
+@media screen and (max-width: 768px) {
+    .sidebar {
+        overflow: auto;
+    }
 }
 
 .sidebar::-webkit-scrollbar {
@@ -81,8 +87,9 @@
 }
 
 .sidebar .nav-list {
-    margin-top: 20px;
+    display: flex;
     height: 100%;
+    flex-direction: column;
 }
 
 .sidebar li {
@@ -238,4 +245,12 @@
 .active-icon,
 .active-links_name {
     color: #756e0d !important;
+}
+
+.sidebar.open ~ section {
+    inset: 0;
+    margin-left: 0;
+    padding-left: 0;
+    position: absolute;
+    width: 100% !important;
 }

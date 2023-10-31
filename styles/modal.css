@@ -70,6 +70,18 @@
     border-radius: 3px;
 }
 
+.modal-input:hover {
+    border: 1px solid #cccccc50;
+}
+
+.modal-input:focus {
+    border: 2px solid #9E9628;
+}
+
+#dateOfBirth {
+    grid-column: 1 / span 2;
+}
+
 .modal-label {
     font-size: 16px;
     color: #333;
@@ -93,12 +105,12 @@
 }
 
 /* Styles for the Terms & Conditions link */
-.modal-terms-link {
+.modal-terms button {
     color: #9E9628;
     text-decoration: none;
 }
 
-.modal-terms-link:hover {
+.modal-terms button:hover {
     text-decoration: underline;
 }
 
@@ -118,9 +130,115 @@
     background-image: linear-gradient(147deg, #9E9628 0%, #756e0d 74%);
     cursor: pointer;
     margin-top: 10px;
-    transform: all 0.5s ease;
+    transition: all 0.5s ease;
+    display: flex;
+    place-items: center;
 }
 
 .modal-submit-button:hover {
     background: rgb(2, 0, 36);
+}
+
+.continue__right-arrow {
+    transform: rotate(90deg);
+    margin-left: 0.5em;
+    font-size: 1.5rem;
+}
+
+.passport-image {
+    gap: 1em;
+    padding: 2em;
+    display: flex;
+    border-width: 2px;
+    cursor: crosshair;
+    place-items: center;
+    border-style: dashed;
+    justify-content: center;
+    grid-column: 1 / span 2;
+    flex-direction: column;
+    transition: all 0.25s ease-in-out;
+}
+
+.passport-image span {
+    color: #888;
+    font-size: 0.8rem;
+}
+
+.passport-image:hover {
+    border-width: 5px;
+    border-style: dashed;
+}
+
+/* passport image loader */
+.loader {
+    width: 64px;
+    height: 64px;
+    position: relative;
+    background: #FFF;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.loader:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 40px;
+    height: 40px;
+    transform: rotate(45deg) translate(30%, 40%);
+    background: #d3ca50;
+    box-shadow: 32px -34px 0 5px #b0a830;
+    animation: slide 2s infinite ease-in-out alternate;
+}
+
+.loader input[type="file"] {
+    display: none;
+}
+
+.loader:after {
+    content: "";
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #9E9628;
+    transform: rotate(0deg);
+    transform-origin: 35px 145px;
+    animation: rotate 2s infinite ease-in-out;
+}
+
+@keyframes slide {
+
+    0%,
+    100% {
+        bottom: -35px
+    }
+
+    25%,
+    75% {
+        bottom: -2px
+    }
+
+    20%,
+    80% {
+        bottom: 2px
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(-15deg)
+    }
+
+    25%,
+    75% {
+        transform: rotate(0deg)
+    }
+
+    100% {
+        transform: rotate(25deg)
+    }
 }

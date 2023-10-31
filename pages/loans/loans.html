@@ -5,14 +5,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CO-OP Financial Services — Loans</title>
-    <link rel="stylesheet" href="/styles/style.css">
     <link rel="stylesheet" href="/styles/tables.css">
     <link rel="stylesheet" href="/styles/sidebar.css">
     <link rel="stylesheet" href="/styles/navigate.css">
     <link rel="stylesheet" href="/pages/loans/loans.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.4.2/css/buttons.dataTables.min.css">
     <!-- Boxicons CDN Link -->
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://kit.fontawesome.com/7c83eb763b.js" crossorigin="anonymous"></script>
+    
     <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <script defer src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    <script defer src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+    <script defer src="https://cdn.datatables.net/buttons/2.4.2/js/dataTables.buttons.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+    <script defer src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.html5.min.js"></script>
+    <script defer src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.print.min.js"></script>
 </head>
 
 <body>
@@ -32,11 +43,11 @@
                     <span class="tooltip">Dashboard</span>
                 </li>
                 <li>
-                    <a href="/pages/user/user.html">
-                        <i class='bx bx-user'></i>
-                        <span class="links_name">User</span>
+                    <a href="/pages/users/users.html">
+                        <i class="fa-solid fa-users"></i>
+                        <span class="links_name">Users</span>
                     </a>
-                    <span class="tooltip">User</span>
+                    <span class="tooltip">Users</span>
                 </li>
                 <li>
                     <a href="/pages/savings/savings.html">
@@ -66,13 +77,6 @@
                     </a>
                     <span class="tooltip">Report</span>
                 </li>
-                <li>
-                    <a href="/pages/settings/settings.html">
-                        <i class='bx bx-cog'></i>
-                        <span class="links_name">Setting</span>
-                    </a>
-                    <span class="tooltip">Setting</span>
-                </li>
                 <li class="profile">
                     <div class="profile-details">
                         <img src="/images/admin_profile_photo.jpg" alt="profileImg">
@@ -85,8 +89,8 @@
                 </li>
             </ul>
         </div>
-        <section class="shares-section">
-            <h1 class="text">Shares</h1>
+        
+        <section class="loans-section">
             <div class="navigation__arrows">
                 <div class="navigation__arrows-left" id="go-back" title="Go Back">
                     <iconify-icon class="left-arrow" icon="octicon:chevron-up-12"></iconify-icon>
@@ -99,166 +103,40 @@
             </div>
 
             <main class="report-table">
-
-                <table>
-                    <caption>Loans: <span>David Kasse</span> </caption>
-                    <thead>
-                        <tr>
-                            <th scope="col">Payment Date</th>
-                            <th scope="col">Beginning Balance</th>
-                            <th scope="col">Scheduled Payment</th>
-                            <th scope="col">Principal</th>
-                            <th scope="col">Interest</th>
-                            <th scope="col">Ending Balance</th>
-                            <th scope="col">Cumulative Interest</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td data-label="Due Date">03/01/2016</td>
-                            <td scope="row" data-label="Beginning Balance">₦235,373</td>
-                            <td scope="row" data-label="Scheduled Payment">₦18,537</td>
-                            <td data-label="Principal">₦5,056</td>
-                            <td data-label="Interest">₦2,443</td>
-                            <td data-label="Ending Balance">₦2,443</td>
-                            <td data-label="Cumulative Interest">₦2,443</td>
-                        </tr>
-                        <tr>
-                            <td data-label="Due Date">04/01/2016</td>
-                            <td scope="row" data-label="Beginning Balance">₦178,673</td>
-                            <td scope="row" data-label="Scheduled Payment">₦6,767</td>
-                            <td data-label="Principal">₦1,190</td>
-                            <td data-label="Interest">₦1,190</td>
-                            <td data-label="Ending Balance">₦1,190</td>
-                            <td data-label="Cumulative Interest">₦1,190</td>
-                        </tr>
-                        <tr>
-                            <td data-label="Due Date">03/01/2016</td>
-                            <td scope="row" data-label="Beginning Balance">₦86,478</td>
-                            <td scope="row" data-label="Scheduled Payment">₦19,567</td>
-                            <td data-label="Principal">₦1,181</td>
-                            <td data-label="Interest">₦1,181</td>
-                            <td data-label="Ending Balance">₦1,181</td>
-                            <td data-label="Cumulative Interest">₦1,181</td>
-                        </tr>
-                        <tr>
-                            <td data-label="Due Date">02/01/2016</td>
-                            <td scope="row" data-label="Account">₦456,734</td>
-                            <td scope="row" data-label="Scheduled Payment">₦90,567</td>
-                            <td data-label="Principal">₦842</td>
-                            <td data-label="Interest">₦842</td>
-                            <td data-label="Ending Balance">₦842</td>
-                            <td data-label="Cumulative Interest">₦842</td>
-                        </tr>
-                        <tr>
-                            <td data-label="Due Date">02/01/2016</td>
-                            <td scope="row" data-label="Account">₦746,908</td>
-                            <td scope="row" data-label="Scheduled Payment">₦146,788</td>
-                            <td data-label="Principal">₦842</td>
-                            <td data-label="Interest">₦842</td>
-                            <td data-label="Ending Balance">₦842</td>
-                            <td data-label="Cumulative Interest">₦842</td>
-                        </tr>
-                        <tr>
-                            <td data-label="Due Date">03/01/2016</td>
-                            <td scope="row" data-label="Beginning Balance">₦235,373</td>
-                            <td scope="row" data-label="Scheduled Payment">₦18,537</td>
-                            <td data-label="Principal">₦5,056</td>
-                            <td data-label="Interest">₦2,443</td>
-                            <td data-label="Ending Balance">₦2,443</td>
-                            <td data-label="Cumulative Interest">₦2,443</td>
-                        </tr>
-                        <tr>
-                            <td data-label="Due Date">04/01/2016</td>
-                            <td scope="row" data-label="Beginning Balance">₦178,673</td>
-                            <td scope="row" data-label="Scheduled Payment">₦6,767</td>
-                            <td data-label="Principal">₦1,190</td>
-                            <td data-label="Interest">₦1,190</td>
-                            <td data-label="Ending Balance">₦1,190</td>
-                            <td data-label="Cumulative Interest">₦1,190</td>
-                        </tr>
-                        <tr>
-                            <td data-label="Due Date">03/01/2016</td>
-                            <td scope="row" data-label="Beginning Balance">₦86,478</td>
-                            <td scope="row" data-label="Scheduled Payment">₦19,567</td>
-                            <td data-label="Principal">₦1,181</td>
-                            <td data-label="Interest">₦1,181</td>
-                            <td data-label="Ending Balance">₦1,181</td>
-                            <td data-label="Cumulative Interest">₦1,181</td>
-                        </tr>
-                        <tr>
-                            <td data-label="Due Date">02/01/2016</td>
-                            <td scope="row" data-label="Account">₦456,734</td>
-                            <td scope="row" data-label="Scheduled Payment">₦90,567</td>
-                            <td data-label="Principal">₦842</td>
-                            <td data-label="Interest">₦842</td>
-                            <td data-label="Ending Balance">₦842</td>
-                            <td data-label="Cumulative Interest">₦842</td>
-                        </tr>
-                        <tr>
-                            <td data-label="Due Date">02/01/2016</td>
-                            <td scope="row" data-label="Account">₦746,908</td>
-                            <td scope="row" data-label="Scheduled Payment">₦146,788</td>
-                            <td data-label="Principal">₦842</td>
-                            <td data-label="Interest">₦842</td>
-                            <td data-label="Ending Balance">₦842</td>
-                            <td data-label="Cumulative Interest">₦842</td>
-                        </tr>
-                        <tr>
-                            <td data-label="Due Date">03/01/2016</td>
-                            <td scope="row" data-label="Beginning Balance">₦235,373</td>
-                            <td scope="row" data-label="Scheduled Payment">₦18,537</td>
-                            <td data-label="Principal">₦5,056</td>
-                            <td data-label="Interest">₦2,443</td>
-                            <td data-label="Ending Balance">₦2,443</td>
-                            <td data-label="Cumulative Interest">₦2,443</td>
-                        </tr>
-                        <tr>
-                            <td data-label="Due Date">04/01/2016</td>
-                            <td scope="row" data-label="Beginning Balance">₦178,673</td>
-                            <td scope="row" data-label="Scheduled Payment">₦6,767</td>
-                            <td data-label="Principal">₦1,190</td>
-                            <td data-label="Interest">₦1,190</td>
-                            <td data-label="Ending Balance">₦1,190</td>
-                            <td data-label="Cumulative Interest">₦1,190</td>
-                        </tr>
-                        <tr>
-                            <td data-label="Due Date">03/01/2016</td>
-                            <td scope="row" data-label="Beginning Balance">₦86,478</td>
-                            <td scope="row" data-label="Scheduled Payment">₦19,567</td>
-                            <td data-label="Principal">₦1,181</td>
-                            <td data-label="Interest">₦1,181</td>
-                            <td data-label="Ending Balance">₦1,181</td>
-                            <td data-label="Cumulative Interest">₦1,181</td>
-                        </tr>
-                        <tr>
-                            <td data-label="Due Date">02/01/2016</td>
-                            <td scope="row" data-label="Account">₦456,734</td>
-                            <td scope="row" data-label="Scheduled Payment">₦90,567</td>
-                            <td data-label="Principal">₦842</td>
-                            <td data-label="Interest">₦842</td>
-                            <td data-label="Ending Balance">₦842</td>
-                            <td data-label="Cumulative Interest">₦842</td>
-                        </tr>
-                        <tr>
-                            <td data-label="Due Date">02/01/2016</td>
-                            <td scope="row" data-label="Account">₦746,908</td>
-                            <td scope="row" data-label="Scheduled Payment">₦146,788</td>
-                            <td data-label="Principal">₦842</td>
-                            <td data-label="Interest">₦842</td>
-                            <td data-label="Ending Balance">₦842</td>
-                            <td data-label="Cumulative Interest">₦842</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </main>
+                <div class="container">
+                    <table id="example" class="display" style="width:100%">
+                        <caption>Loans:</caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">Names</th>
+                                <th scope="col">Date</th>
+                                <th scope="col">Principal</th>
+                                <th scope="col">Interest</th>
+                                <th scope="col">Payment</th>
+                                <th scope="col">Balance</th>
+                                <th scope="col">Cumulative Interest</th>
+                            </tr>
+                        </thead>
+                        <tfoot>
+                            <tr>
+                                <th scope="col">Names</th>
+                                <th scope="col">Date</th>
+                                <th scope="col">Principal</th>
+                                <th scope="col">Interest</th>
+                                <th scope="col">Payment</th>
+                                <th scope="col">Balance</th>
+                                <th scope="col">Cumulative Interest</th>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
 
         </section>
 
     </div>
-    <script src="/scripts/script.js"></script>
     <script src="/scripts/tables.js"></script>
     <script src="/scripts/navigate.js"></script>
+    <script defer src="/pages/loans/loans.js"></script>
 </body>
 
 </html>

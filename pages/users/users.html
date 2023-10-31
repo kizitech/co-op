@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <title> CO-OP Financial Services — My Profile</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="/styles/sidebar.css">
+    <link rel="stylesheet" href="/pages/users/users.css">
+    <link rel="stylesheet" href="/styles/user-details.css">
+    <!-- Boxicons CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+
+    <script src="https://kit.fontawesome.com/7c83eb763b.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="sidebar">
+        <div class="logo-details">
+            <i class='bx bxl-c-plus-plus icon'></i>
+            <div class="logo_name">CO-OP</div>
+            <i class='bx bx-menu' id="btn"></i>
+        </div>
+        <ul class="nav-list">
+            <li>
+                <a href="/pages/dashboard/dashboard.html">
+                    <i class='bx bx-grid-alt'></i>
+                    <span class="links_name">Dashboard</span>
+                </a>
+                <span class="tooltip">Dashboard</span>
+            </li>
+            <li>
+                <a href="/pages/users/users.html" class="active-button">
+                    <i class="fa-solid fa-users active-icon"></i>
+                    <span class="links_name active-links_name">Users</span>
+                </a>
+                <span class="tooltip">Users</span>
+            </li>
+            <li>
+                <a href="/pages/savings/savings.html">
+                    <i class='bx bx-wallet'></i>
+                    <span class="links_name">Savings</span>
+                </a>
+                <span class="tooltip">Savings</span>
+            </li>
+            <li>
+                <a href="/pages/loans/loans.html">
+                    <i class='bx bx-money'></i>
+                    <span class="links_name">Loans</span>
+                </a>
+                <span class="tooltip">Loans</span>
+            </li>
+            <li>
+                <a href="/pages/shares/shares.html">
+                    <i class='bx bxs-bank'></i>
+                    <span class="links_name">Shares</span>
+                </a>
+                <span class="tooltip">Shares</span>
+            </li>
+            <li>
+                <a href="/pages/reports/reports.html">
+                    <i class='bx bx-shield-alt-2'></i>
+                    <span class="links_name">Report</span>
+                </a>
+                <span class="tooltip">Report</span>
+            </li>
+            <li class="profile">
+                <div class="profile-details">
+                    <img src="/images/admin_profile_photo.jpg" alt="profileImg">
+                    <div class="name_job">
+                        <div class="name">Akindele Timilehin</div>
+                        <div class="job">Agriculturist</div>
+                    </div>
+                </div>
+                <i class='bx bx-log-out' title="Log Out" id="log_out"></i>
+            </li>
+        </ul>
+    </div>
+
+    <section class="user-section">
+        <div class="app-container">
+            <div class="app-header">
+                <div class="app-header-left">
+                    <h1>Users Information</h1>
+                </div>
+                <div class="app-header-right">
+                    <div class="search-wrapper">
+                        <input type="text" value="" class="search-input" id="user-search-input" onkeyup="userSearch()" placeholder="Search for user..">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="#756e0d"
+                            stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="feather feather-search"
+                            viewBox="0 0 24 24">
+                            <defs></defs>
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <path d="M21 21l-4.35-4.35"></path>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="app-content">
+                <div class="projects-section">
+                    <div class="projects-section-line">
+                        <div class="projects-status">
+                            <div class="item-status">
+                                <span class="status-type">Total Number Of Users:</span>
+                                <span class="status-number" id="total-users-count"></span>
+                            </div>
+                        </div>
+                        <div class="view-actions">
+                            <button class="view-btn list-view" title="List View">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                    class="feather feather-list">
+                                    <line x1="8" y1="6" x2="21" y2="6" />
+                                    <line x1="8" y1="12" x2="21" y2="12" />
+                                    <line x1="8" y1="18" x2="21" y2="18" />
+                                    <line x1="3" y1="6" x2="3.01" y2="6" />
+                                    <line x1="3" y1="12" x2="3.01" y2="12" />
+                                    <line x1="3" y1="18" x2="3.01" y2="18" />
+                                </svg>
+                            </button>
+                            <button class="view-btn grid-view active" title="Grid View">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                    class="feather feather-grid">
+                                    <rect x="3" y="3" width="7" height="7" />
+                                    <rect x="14" y="3" width="7" height="7" />
+                                    <rect x="14" y="14" width="7" height="7" />
+                                    <rect x="3" y="14" width="7" height="7" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="project-boxes jsGridView" id="projectBoxes"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="/pages/users/users.js"></script>
+    <script src="/pages/users/usersData.js"></script>
+</body>
+
+</html>

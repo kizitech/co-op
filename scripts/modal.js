@@ -15,3 +15,20 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
+
+
+// IMAGE UPLOADED NOTIFY MODAL
+function updateImageStatus() {
+  const imageLoader = document.querySelector('.loader');
+  const imageStatus = document.getElementById("imageStatus");
+  const fileInput = document.getElementById("passport");
+
+  if (fileInput.files.length > 0) {
+    imageStatus.innerText = "Upload Successful ✔";
+    imageStatus.style.color = "#9E9628";
+    imageStatus.style.fontSize = "1.5rem";
+    imageLoader.style.display = "none";
+  } else {
+    imageStatus.innerText = "Please Insert a Passport Image";
+  }
+}

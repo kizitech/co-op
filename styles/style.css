@@ -179,6 +179,7 @@ textarea {
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 7em;
 }
 
 
@@ -277,7 +278,7 @@ html {
     align-items: center;
     justify-content: center;
     /* box-shadow: 0px 0px 20px 20px black; */
-    grid-template-columns: 1fr 1fr 1fr 2fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 2fr 1fr 1fr;
 }
 
 .header__nav-link {
@@ -313,22 +314,91 @@ html {
     font-family: 'Dela Gothic One', cursive;
 }
 
+/* BACKGROUND SLIDER */
+#CrossFade {
+    background: #fff;
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
+
+#CrossFade::after {
+    content: "";
+    inset: 0;
+    position: absolute;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5));
+}
+
+#CrossFade img {
+    position: absolute;
+    min-width: 100%;
+    min-height: 100%;
+    height: auto;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    opacity: 0;
+    object-fit: cover;
+    transform: scale(1.4) rotate(12deg);
+    -webkit-animation: CrossFade 24s infinite;
+    animation: CrossFade 25s infinite;
+}
+
+#CrossFade img:nth-child(3) {
+    -webkit-animation-delay: 6s;
+    animation-delay: 6s;
+}
+
+#CrossFade img:nth-child(2) {
+    -webkit-animation-delay: 12s;
+    animation-delay: 12s;
+}
+
+#CrossFade img:nth-child(1) {
+    -webkit-animation-delay: 18s;
+    animation-delay: 18s;
+}
+
+@-webkit-keyframes CrossFade {
+    25% {
+        opacity: 1;
+        transform: scale(1) rotate(0);
+    }
+
+    40% {
+        opacity: 0;
+    }
+}
+
+@keyframes CrossFade {
+    25% {
+        opacity: 1;
+        transform: scale(1) rotate(0);
+    }
+
+    40% {
+        opacity: 0;
+    }
+}
 
 /* HERO PAGE */
 .hero {
+    z-index: 1;
     height: 100vh;
     display: flex;
+    position: relative;
     align-items: center;
     justify-content: center;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)), url("/images/coop_hero_image.jpg");
 }
 
 .hero form {
     padding: 5em;
-    border: 1px solid #c8ccd4;
+    border: 1.5px solid #c8ccd4;
 }
 
 
@@ -420,8 +490,6 @@ html {
     box-shadow: none;
 }
 
-
-
 /* FORM SUBMIT BUTTON STYLES */
 .form__submit {
     margin: 2em 0 0;
@@ -447,12 +515,12 @@ html {
     transform: translate(0em, 0.2em);
 }
 
-.forgot__number-link {
+.forgot__number-button {
     color: #9E9628;
     font-size: 0.7rem;
 }
 
-.forgot__number-link:hover {
+.forgot__number-button:hover {
     text-decoration: underline;
 }
 
@@ -508,7 +576,7 @@ html {
         font-size: 2rem;
     }
 
-    .header__nav-item:nth-child(4) {
+    .header__nav-item:nth-child(3) {
         display: none;
     }
 
@@ -569,32 +637,15 @@ html {
     .user-profile__details {
         gap: 3em;
         display: flex;
-        margin: 1em 0 5em;
+        margin: 1em 0;
         flex-direction: column-reverse;
     }
 
     .user-profile__info-heading {
         width: 100%;
         display: flex;
-        margin-bottom: 0;
         justify-content: flex-end;
-    }
-
-    .user-profile__details-list h2 {
-        display: flex;
-        text-align: end;
-        font-size: 0.8rem;
-        align-items: center;
-        justify-content: flex-end;
-    }
-
-    .report-section__items {
-        gap: 2em;
-        grid-template-columns: 1fr;
-    }
-
-    .report-section__items button {
-        width: 70%;
+        margin-bottom: 0 !important;
     }
 }
 

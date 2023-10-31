@@ -1,0 +1,144 @@
+.transaction-card__container {
+    padding: 2em;
+    display: grid;
+    min-height: 100vh;
+    text-align: center;
+    place-items: center;
+    background: #e0e0e0;
+}
+
+.transaction-card {
+    width: 100%;
+    max-width: 50em;
+    padding: 10%;
+    border-radius: 50px;
+    background: #e0e0e0;
+    box-shadow: 15px 20px 60px #9e962892,
+        -20px -20px 60px #ffffff;
+}
+
+.transaction-card {
+    border-radius: 15px;
+    background: #fffefe;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+}
+
+.transaction-card::before {
+    content: "";
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    bottom: -20%;
+    right: -20%;
+    border-radius: 50%;
+    background: #d8cf52a1;
+    transition: all .8s ease;
+    filter: blur(.5rem);
+}
+
+.transaction-card:hover::before {
+    width: 140px;
+    height: 140px;
+    bottom: 0%;
+    right: 50%;
+    filter: blur(3rem);
+}
+
+.transaction-card::after {
+    content: "";
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    top: -20%;
+    left: -20%;
+    border-radius: 50%;
+    background: #d8cf52a1;
+    transition: all .8s ease;
+    filter: blur(.5rem);
+}
+
+.transaction-card:hover::after {
+    width: 140px;
+    height: 140px;
+    top: 0%;
+    left: 50%;
+    filter: blur(5rem);
+}
+
+.transaction-card__title-text {
+    color: #9E9628;
+    font-weight: 500;
+    font-size: 2rem;
+    padding-bottom: 0.3em;
+}
+
+.transaction-card__text-description {
+    flex-grow: 1;
+    padding: 15px;
+    display: flex;
+    font-weight: 900;
+    font-size: 1em;
+    flex-direction: column;
+    margin: 1em 0;
+}
+
+.transaction-card__text-label {
+    font-weight: 300;
+}
+
+.transaction-card__input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.quick-transaction__label {
+    width: 100%;
+    display: block;
+    margin-top: 2em;
+    text-align: left;
+}
+
+.modal-input:hover {
+    border: 1px solid #cccccc50;
+}
+
+.modal-input:focus {
+    border: 2px solid #9E9628;
+}
+
+.share-holding-amount {
+    color: #9E9628;
+    text-align: left;
+    font-size: 1rem;
+    position: absolute;
+    right: 3%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.transaction-card__submit-button {
+    color: #fff;
+    padding: 1em 3em;
+    border: none;
+    border-radius: 3px;
+    background-image: linear-gradient(147deg, #9E9628 0%, #756e0d 74%);
+    cursor: pointer;
+    margin-top: 10px;
+    transition: all 0.5s ease;
+    display: flex;
+    place-items: center;
+}
+
+.transaction-card__submit-button:hover {
+    background: rgb(2, 0, 36);
+}
+
+.transaction-card__submit {
+    float: right;
+}

@@ -1,23 +1,15 @@
 .savings-section {
-    position: relative;
+
     background: #FFF;
     min-height: 100vh;
     top: 0;
-    left: 78px;
-    width: calc(100% - 78px);
-    transition: all 0.5s ease;
+    width: 100%;
     z-index: 2;
+    margin-left: 78px;
+    transition: all 0.5s ease;
 }
 
 .sidebar.open~.savings-section {
-    left: 250px;
+    left: 0px;
     width: calc(100% - 250px);
-}
-
-.savings-section .text {
-    display: inline-block;
-    color: #756e0d;
-    font-size: 25px;
-    font-weight: 500;
-    margin: 18px
 }
