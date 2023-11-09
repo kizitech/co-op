@@ -35,4 +35,3 @@ updateMultipliedValue();
 
 // Insert the new element after the existing one
 unitValueElement.parentNode.appendChild(multipliedValueElement);
-

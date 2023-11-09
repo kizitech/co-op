@@ -1,20 +1,37 @@
-// Parse the 'id' query parameter from the URL
-const urlParams = new URLSearchParams(window.location.search);
-const userId = parseInt(urlParams.get('id'));
+let sidebar = document.querySelector(".sidebar");
+let closeBtn = document.querySelector("#btn");
 
-// Find the user data based on the 'userId'
-const user = usersData.find(user => user.id === userId);
+closeBtn.addEventListener("click", () => {
+    sidebar.classList.toggle("open");
+    menuBtnChange();
+});
 
-if (user) {
-    // Populate the user profile page with user-specific data
-    document.getElementById('avatar').src = user.image;
-    document.getElementById('user-name').textContent = user.name;
-    document.getElementById('user-mda').textContent = user.mda;
-    document.getElementById('user-email').textContent = user.email;
-
-    // Set the page title to the user's name
-    document.title = `CO-OP Financial Services — ${user.name}`;
-} else {
-    // Handle the case where the user with the specified 'id' is not found
-    // You can display a message or redirect to an error page.
+// following are the code to change sidebar button(optional)
+function menuBtnChange() {
+    if (sidebar.classList.contains("open")) {
+        closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");//replacing the iocns class
+    } else {
+        closeBtn.classList.replace("bx-menu-alt-right", "bx-menu");//replacing the iocns class
+    }
 }
+
+
+// Get the element that contains the unit value
+var unitValueElement = document.getElementById("unitValue");
+
+// Create a function to update the multiplied value
+function updateMultipliedValue() {
+    var unitNumber = parseInt(unitValueElement.textContent);
+    var multipliedValue = unitNumber * 20000;
+    multipliedValueElement.textContent = "₦" + multipliedValue;
+}
+
+// Add an input event listener to the "unitValue" element
+unitValueElement.addEventListener("input", updateMultipliedValue);
+
+// Calculate the initial multiplied value
+var multipliedValueElement = document.createElement("p");
+updateMultipliedValue();
+
+// Insert the new element after the existing one
+unitValueElement.parentNode.appendChild(multipliedValueElement);

@@ -247,7 +247,7 @@
     color: #756e0d !important;
 }
 
-.sidebar.open ~ section {
+.sidebar.open~section {
     inset: 0;
     margin-left: 0;
     padding-left: 0;

@@ -3,16 +3,16 @@
 
 <head>
     <meta charset="UTF-8">
-    <title> CO-OP Financial Services — My Dashboard</title>
+    <title> CO-OP Financial Services — User Profile</title>
     <link rel="stylesheet" href="/styles/style.css">
-    <link rel="stylesheet" href="/styles/user-details.css">
     <link rel="stylesheet" href="/styles/sidebar.css">
+    <link rel="stylesheet" href="/styles/user-details.css">
     <link rel="stylesheet" href="/pages/dashboard/dashboard.css">
+    <link rel="stylesheet" href="/pages/userProfile/user_profile.css">
     <!-- Boxicons CDN Link -->
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
-    <script src="https://kit.fontawesome.com/7c83eb763b.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -24,18 +24,18 @@
         </div>
         <ul class="nav-list">
             <li>
-                <a href="/pages/dashboard/dashboard.html" class="active-button">
-                    <i class='bx bx-grid-alt active-icon'></i>
-                    <span class="links_name active-links_name">Dashboard</span>
+                <a href="/pages/dashboard/dashboard.html">
+                    <i class='bx bx-grid-alt'></i>
+                    <span class="links_name">Dashboard</span>
                 </a>
                 <span class="tooltip">Dashboard</span>
             </li>
             <li>
-                <a href="/pages/users/users.html">
-                    <i class="fa-solid fa-users"></i>
-                    <span class="links_name">Users</span>
+                <a href="/pages/users/users.html" class="active-button">
+                    <i class='bx bx-user active-icon'></i>
+                    <span class="links_name active-links_name">User</span>
                 </a>
-                <span class="tooltip">Users</span>
+                <span class="tooltip">User</span>
             </li>
             <li>
                 <a href="/pages/savings/savings.html">
@@ -77,10 +77,11 @@
             </li>
         </ul>
     </div>
+
     <section class="dashboard-section">
         <section class="personal-info">
             <div class="personal-info__header">
-                <h1 class="personal-info__title">Personal Information</h1>
+                <h1 class="personal-info__title">Personal Info</h1>
             </div>
             <article class="user-profile">
                 <div class="user-profile__info">
@@ -91,19 +92,19 @@
                         <ul class="user-profile__details-list">
                             <li>
                                 <h2 class="user-profile__detail-heading">Name:</h2>
-                                <p class="user-profile__detail-value"><span class="user-profile__detail-amount">Akindele
-                                        Timilehin</span>
+                                <p class="user-profile__detail-value">
+                                    <span class="user-profile__detail-amount" id="user-name"></span>
                                 </p>
                             </li>
                             <li>
                                 <h2 class="user-profile__detail-heading">MDA:</h2>
-                                <p class="user-profile__detail-value"><span
-                                        class="user-profile__detail-amount">Treasurer</span>
+                                <p class="user-profile__detail-value"><span class="user-profile__detail-amount"
+                                        id="user-mda"></span>
                                 </p>
                             </li>
                             <li>
                                 <h2 class="user-profile__detail-heading">Email:</h2>
-                                <p class="user-profile__detail-value">akindele@gmail.com</p>
+                                <p class="user-profile__detail-value" id="user-email"></p>
                             </li>
                             <li>
                                 <h2 class="user-profile__detail-heading">Saving:</h2>
@@ -131,50 +132,89 @@
                         </ul>
                     </section>
                     <section class="user-profile__photo">
-                        <img src="/images/admin_profile_photo.jpg" alt="admin profile" class="user-profile__photo-image"
+                        <img src="" id="avatar" alt="admin profile" class="user-profile__photo-image"
                             title="Profile Image">
                     </section>
                 </div>
             </article>
         </section>
 
-        <section class="report-section">
-            <div class="report-section__items">
-                <a href="/pages/savings/savings.html" class="report-item" title="Savings">
-                    <button type="button" class="report-item__button">
-                        <div class="report-item__heading">
-                            <p class="report-item__title">Report 1</p>
-                            <iconify-icon icon="fluent-mdl2:savings" width="2em"></iconify-icon>
-                        </div>
-                        <span class="report-item__category">Savings</span>
-                        <h3>Financial Freedom Starts with Savings.</h3>
-                    </button>
-                </a>
-                <a href="/pages/loans/loans.html" class="report-item" title="Loans">
-                    <button type="button" class="report-item__button">
-                        <div class="report-item__heading">
-                            <p class="report-item__title">Report 2</p>
-                            <iconify-icon icon="gridicons:refund" width="2em"></iconify-icon>
-                        </div>
-                        <span class="report-item__category">Loans</span>
-                        <h3>Empowering Your Dreams with Loans.</h3>
-                    </button>
-                </a>
-                <a href="/pages/shares/shares.html" class="report-item" title="Shares">
-                    <button type="button" class="report-item__button">
-                        <div class="report-item__heading">
-                            <p class="report-item__title">Report 3</p>
-                            <iconify-icon icon="mdi-light:chart-pie" width="2em"></iconify-icon>
-                        </div>
-                        <span class="report-item__category">Shares</span>
-                        <h3>Diversify Your Wealth with Shares.</h3>
-                    </button>
-                </a>
-            </div>
+        <section class="user-tables">
+            <!-- SAVING -->
+            <table>
+                <caption>Saving</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Date</th>
+                        <th scope="col">Particulars</th>
+                        <th scope="col">Dividend</th>
+                        <th scope="col">Cr</th>
+                        <th scope="col">Dr</th>
+                        <th scope="col">Bal</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-label="Date">04/01/2016</td>
+                        <td data-label="Particulars">Common Stock</td>
+                        <td data-label="Dividend">₦1,690</td>
+                        <td data-label="Cr">₦1,690</td>
+                        <td data-label="Dr">₦1,690</td>
+                        <td data-label="Bal">₦1,690</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- LOAN -->
+            <table>
+                <caption>Loan</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Date</th>
+                        <th scope="col">Principal</th>
+                        <th scope="col">Payment</th>
+                        <th scope="col">Interest</th>
+                        <th scope="col">Balance</th>
+                        <th scope="col">Cumulative Interest</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-label="Date">04/01/2016</td>
+                        <td data-label="Principal">Preferred Stock</td>
+                        <td data-label="Payment">₦1,190</td>
+                        <td data-label="Interest">₦1,190</td>
+                        <td data-label="Balance">₦1,190</td>
+                        <td data-label="Cumulative Interest">₦1,190</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- SHARE -->
+            <table>
+                <caption>Shares</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">value of holdings</th>
+                        <th scope="col">share holdings (units)</th>
+                        <th scope="col">% of holding</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-label="Value">₦8,634,654</td>
+                        <td data-label="Share units">2</td>
+                        <td data-label=" Shares percentage">9.6%</td>
+                    </tr>
+                </tbody>
+            </table>
         </section>
+
 
     </section>
     <script src="/pages/dashboard/dashboard.js"></script>
+    <script src="/pages/users/usersData.js"></script>
+    <script src="/pages/userProfile/user_profile.js"></script>
 </body>
 
 </html>

@@ -197,7 +197,7 @@ const usersData = [
 
 const userBoxes = usersData.map((user, index) => {
     // Create a unique URL for each user based on their ID
-    const userUrl = `/pages/userProfile/user_profile.html?id=${user.id}`;
+    const userUrl = `/pages/adminUserProfile/admin_user_profile.html?id=${user.id}`;
 
     return `
         <div class="project-box-wrapper">
@@ -209,7 +209,7 @@ const userBoxes = usersData.map((user, index) => {
                             <p>${user.mda}</p>
                         </div>
                         <ul class="social-links">
-                            <a href="mailto:${user.email}" class="email-link"><li title="Send an email"><i class="fa-regular fa-envelope"></i></li></a>
+                            <a href="mailto:${user.email}" class="email-link"><li title="open"><i class="fa-regular fa-envelope"></i></li></a>
                         </ul>
                     </article>
                 </div>

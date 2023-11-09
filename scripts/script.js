@@ -8,7 +8,7 @@ const oldMember = document.querySelector('#cbxx');
 
 // TOGGLE BUTTON
 function handleClick() {
-   body.classList.toggle("active");
+    body.classList.toggle("active");
 }
 toggleBtn.addEventListener("click", handleClick);
 
@@ -32,7 +32,7 @@ var modal = document.getElementById("myModal");
 newMember.addEventListener('change', () => {
     if (newMember.checked) {
         modal.style.display = "block";
-   }
+    }
 })
 
 
@@ -40,26 +40,26 @@ var formInfo = document.getElementById("form__field-info");
 oldMember.addEventListener('change', () => {
     if (oldMember.checked) {
         formInfo.style.display = "block";
-   } else {
+    } else {
         formInfo.style.display = "none";
-   }
+    }
 })
 
-   
+
 
 
 newMember.addEventListener('click', function () {
-  // If the newMember checkbox is checked, uncheck the oldMember checkbox
-  if (newMember.checked) {
-    oldMember.checked = false;
-    formInfo.style.display = "none";
+    // If the newMember checkbox is checked, uncheck the oldMember checkbox
+    if (newMember.checked) {
+        oldMember.checked = false;
+        formInfo.style.display = "none";
 
-  }
+    }
 });
 
 oldMember.addEventListener('click', function () {
-  // If the oldMember checkbox is checked, uncheck the newMember checkbox
-  if (oldMember.checked) {
-    newMember.checked = false;
-  }
+    // If the oldMember checkbox is checked, uncheck the newMember checkbox
+    if (oldMember.checked) {
+        newMember.checked = false;
+    }
 });

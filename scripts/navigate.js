@@ -6,4 +6,3 @@ function goBack() {
 }
 previousPage.addEventListener("click", goBack);
 
-

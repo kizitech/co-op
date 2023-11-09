@@ -71,8 +71,8 @@
 }
 
 .timeline__heading__text {
-            font-weight: normal;
-            color: #9E9628;
+    font-weight: normal;
+    color: #9E9628;
     font-family: "Montserrat", sans-serif;
     font-size: calc(2.5rem + ((1vw - 0.8rem) * -0.5));
 }
@@ -127,7 +127,7 @@
     font-size: 2.4rem;
     font-weight: 700;
     border-radius: 100%;
-    position: relative; 
+    position: relative;
     background-image: linear-gradient(147deg, #9E9628 0%, #756e0d 74%);
 }
 

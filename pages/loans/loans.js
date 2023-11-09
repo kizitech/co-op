@@ -45,4 +45,3 @@ function menuBtnChange() {
         closeBtn.classList.replace("bx-menu-alt-right", "bx-menu");//replacing the iocns class
     }
 }
-

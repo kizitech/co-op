@@ -16,68 +16,7 @@
 </head>
 
 <body>
-    <div class="sidebar">
-        <div class="logo-details">
-            <i class='bx bxl-c-plus-plus icon'></i>
-            <div class="logo_name">CO-OP</div>
-            <i class='bx bx-menu' id="btn"></i>
-        </div>
-        <ul class="nav-list">
-            <li>
-                <a href="/pages/dashboard/dashboard.html">
-                    <i class='bx bx-grid-alt'></i>
-                    <span class="links_name">Dashboard</span>
-                </a>
-                <span class="tooltip">Dashboard</span>
-            </li>
-            <li>
-                <a href="/pages/users/users.html" class="active-button">
-                    <i class='bx bx-user active-icon'></i>
-                    <span class="links_name active-links_name">User</span>
-                </a>
-                <span class="tooltip">User</span>
-            </li>
-            <li>
-                <a href="/pages/savings/savings.html">
-                    <i class='bx bx-wallet'></i>
-                    <span class="links_name">Savings</span>
-                </a>
-                <span class="tooltip">Savings</span>
-            </li>
-            <li>
-                <a href="/pages/loans/loans.html">
-                    <i class='bx bx-money'></i>
-                    <span class="links_name">Loans</span>
-                </a>
-                <span class="tooltip">Loans</span>
-            </li>
-            <li>
-                <a href="/pages/shares/shares.html">
-                    <i class='bx bxs-bank'></i>
-                    <span class="links_name">Shares</span>
-                </a>
-                <span class="tooltip">Shares</span>
-            </li>
-            <li>
-                <a href="/pages/reports/reports.html">
-                    <i class='bx bx-shield-alt-2'></i>
-                    <span class="links_name">Report</span>
-                </a>
-                <span class="tooltip">Report</span>
-            </li>
-            <li class="profile">
-                <div class="profile-details">
-                    <img src="/images/admin_profile_photo.jpg" alt="profileImg">
-                    <div class="name_job">
-                        <div class="name">Akindele Timilehin</div>
-                        <div class="job">Agriculturist</div>
-                    </div>
-                </div>
-                <i class='bx bx-log-out' title="Log Out" id="log_out"></i>
-            </li>
-        </ul>
-    </div>
-    
+
     <section class="dashboard-section">
         <section class="personal-info">
             <div class="personal-info__header">
@@ -93,36 +32,37 @@
                             <li>
                                 <h2 class="user-profile__detail-heading">Name:</h2>
                                 <p class="user-profile__detail-value">
-                                    <span class="user-profile__detail-amount" id="user-name"></span>
+                                    <span class="user-profile__detail-amount" id="user-name">Aje Tobe</span>
                                 </p>
                             </li>
                             <li>
                                 <h2 class="user-profile__detail-heading">MDA:</h2>
-                                <p class="user-profile__detail-value"><span
-                                        class="user-profile__detail-amount" id="user-mda"></span>
+                                <p class="user-profile__detail-value"><span class="user-profile__detail-amount"
+                                        id="user-mda">Accountant</span>
                                 </p>
                             </li>
                             <li>
                                 <h2 class="user-profile__detail-heading">Email:</h2>
-                                <p class="user-profile__detail-value" id="user-email"></p>
+                                <p class="user-profile__detail-value" id="user-email">tobe@gmail.com</p>
                             </li>
                             <li>
                                 <h2 class="user-profile__detail-heading">Saving:</h2>
-                                <p class="user-profile__detail-value">₦<span class="user-profile__detail-amount"
-                                        contenteditable="true">30,000 </span>per month
+                                <p class="user-profile__detail-value">₦<span class="user-profile__detail-amount">30,000
+                                    </span>per month
                                 </p>
                             </li>
                             <li>
                                 <h2 class="user-profile__detail-heading">Loans:</h2>
-                                <p class="user-profile__detail-value">₦<span class="user-profile__detail-amount"
-                                        contenteditable="true">300,000</span>
+                                <p class="user-profile__detail-value">₦<span
+                                        class="user-profile__detail-amount">300,000</span>
                                 </p>
                             </li>
                             <li>
                                 <h2 class="user-profile__detail-heading">Shares:</h2>
                                 <div class="user-profile__detail-value" style="display: flex; gap: 1em;">
-                                    <span id="unitValue" contenteditable="true">24</span>
+                                    <span id="unitValue">4</span>
                                     <span>units</span>
+                                    <div id="btn"></div>
                                 </div>
                             </li>
                             <li>
@@ -132,8 +72,8 @@
                         </ul>
                     </section>
                     <section class="user-profile__photo">
-                        <img src="" id="avatar" alt="admin profile" class="user-profile__photo-image"
-                            title="Profile Image">
+                        <img src="/images/coop_hero_image.jpg" id="avatar" alt="profile photo" class="user-profile__photo-image"
+                            title="Profile Image" style="width: 25em;">
                     </section>
                 </div>
             </article>
@@ -212,8 +152,6 @@
 
 
     </section>
-    <script src="/pages/dashboard/dashboard.js"></script>
-    <script src="/pages/users/usersData.js"></script>
     <script src="/pages/userProfile/user_profile.js"></script>
 </body>
 
