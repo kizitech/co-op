@@ -209,7 +209,7 @@ const userBoxes = usersData.map((user, index) => {
                             <p>${user.mda}</p>
                         </div>
                         <ul class="social-links">
-                            <a href="mailto:${user.email}" class="email-link"><li title="open"><i class="fa-regular fa-envelope"></i></li></a>
+                            <a href="mailto:${user.email}" class="email-link"><li title="Open ${user.name} Account"><i class="fa-solid fa-right-long"></i></li></a>
                         </ul>
                     </article>
                 </div>
