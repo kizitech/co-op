@@ -1,84 +1,162 @@
-body {
-    font-family: "lato", sans-serif;
+.reports-section {
+
+    background: #FFF;
+    min-height: 100vh;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+    margin-left: 78px;
+    transition: all 0.5s ease;
 }
 
-.container {
-    max-width: 1000px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 10px;
-    padding-right: 10px;
-}
-
-h2 {
-    font-size: 26px;
-    margin: 20px 0;
+.reports-section>h2 {
+    font-size: 2.6rem;
     text-align: center;
+    font-weight: 700;
+    padding-top: 1em;
+    padding-bottom: 1.5em;
+    color: #756e0d;
 }
 
-h2 small {
-    font-size: 0.5em;
+.sidebar.open~.reports-section {
+    left: 0px;
+    width: calc(100% - 250px);
 }
 
-.responsive-table li {
-    border-radius: 3px;
-    padding: 25px 30px;
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 25px;
+/* Table Styles */
+.recent-transactions {
+    margin-block: 3em;
 }
 
-.responsive-table .table-header {
-    background-color: #95A5A6;
-    font-size: 14px;
-    text-transform: uppercase;
-    letter-spacing: 0.03em;
+
+.recent-transactions p {
+    font-size: 1.5rem;
+    text-align: center;
+    font-weight: 500;
+    padding-bottom: 1em;
 }
 
-.responsive-table .table-row {
-    background-color: #ffffff;
-    box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.1);
+.recent-transactions .table-wrapper {
+    margin: 10px 70px 70px;
+    box-shadow: 0px 35px 50px rgba(0, 0, 0, 0.2);
 }
 
-.responsive-table .col-1 {
-    flex-basis: 10%;
+.recent-transactions .fl-table {
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: normal;
+    border: none;
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 100%;
+    white-space: nowrap;
+    background-color: white;
 }
 
-.responsive-table .col-2 {
-    flex-basis: 40%;
+.recent-transactions .fl-table td,
+.recent-transactions .fl-table th {
+    text-align: center;
+    padding: 20px;
 }
 
-.responsive-table .col-3 {
-    flex-basis: 25%;
+.recent-transactions .fl-table td {
+    border-right: 1px solid #f8f8f8;
+    font-size: 12px;
 }
 
-.responsive-table .col-4 {
-    flex-basis: 25%;
+.recent-transactions .fl-table thead th {
+    color: #ffffff;
+    background: #756e0d;
 }
 
-@media all and (max-width: 767px) {
-    .responsive-table .table-header {
-        display: none;
+
+.recent-transactions .fl-table thead th:nth-child(odd) {
+    color: #ffffff;
+    background: #b4aa2a;
+}
+
+.recent-transactions .fl-table tr:nth-child(even) {
+    background: #F8F8F8;
+}
+
+/* Responsive */
+
+@media (max-width: 767px) {
+    .recent-transactions .fl-table {
+        display: block;
+        width: 100%;
     }
 
-    .responsive-table li {
+    .recent-transactions .table-wrapper:before {
+        content: "Scroll horizontally >";
+        display: block;
+        text-align: right;
+        font-size: 11px;
+        color: white;
+        padding: 0 0 10px;
+    }
+
+    .recent-transactions .fl-table thead,
+    .recent-transactions .fl-table tbody,
+    .recent-transactions .fl-table thead th {
         display: block;
     }
 
-    .responsive-table .col {
-        flex-basis: 100%;
+    .recent-transactions .fl-table thead th:last-child {
+        border-bottom: none;
     }
 
-    .responsive-table .col {
-        display: flex;
-        padding: 10px 0;
+    .recent-transactions .fl-table thead {
+        float: left;
     }
 
-    .responsive-table .col:before {
-        color: #6C7A89;
-        padding-right: 10px;
-        content: attr(data-label);
-        flex-basis: 50%;
-        text-align: right;
+    .recent-transactions .fl-table tbody {
+        width: auto;
+        position: relative;
+        overflow-x: auto;
+    }
+
+    .recent-transactions .fl-table td,
+    .recent-transactions .fl-table th {
+        padding: 20px .625em .625em .625em;
+        height: 60px;
+        vertical-align: middle;
+        box-sizing: border-box;
+        overflow-x: hidden;
+        overflow-y: auto;
+        width: 120px;
+        font-size: 13px;
+        text-overflow: ellipsis;
+    }
+
+    .recent-transactions .fl-table thead th {
+        text-align: left;
+        border-bottom: 1px solid #f7f7f9;
+    }
+
+    .recent-transactions .fl-table tbody tr {
+        display: table-cell;
+    }
+
+    .recent-transactions .fl-table tbody tr:nth-child(odd) {
+        background: none;
+    }
+
+    .recent-transactions .fl-table tr:nth-child(even) {
+        background: transparent;
+    }
+
+    .recent-transactions .fl-table tr td:nth-child(odd) {
+        background: #F8F8F8;
+        border-right: 1px solid #E6E4E4;
+    }
+
+    .recent-transactions .fl-table tr td:nth-child(even) {
+        border-right: 1px solid #E6E4E4;
+    }
+
+    .recent-transactions .fl-table tbody td {
+        display: block;
+        text-align: center;
     }
 }
