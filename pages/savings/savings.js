@@ -27,6 +27,27 @@ new DataTable('#example', {
 });
 
 
+$(document).ready(function () {
+
+    $('#datatable').dataTable({
+        dom: 'Bfrtip',
+        buttons: [
+            'copy', 'csv', 'excel', 'pdf', 'print'
+        ],
+
+        createdRow: function (row, data, dataIndex) {
+            var tdElements = $('td', row);
+
+            tdElements.each(function (index) {
+                var columnHeaderText = $('#datatable thead th').eq(index).text();
+                $(this).attr('data-label', columnHeaderText);
+            });
+        }
+    });
+
+});
+
+
 
 
 

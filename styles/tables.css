@@ -172,28 +172,17 @@ table td {
     /* Placeholder text color */
 }
 
-
-.dataTables_wrapper {
-
-    padding-right: 2em;
+table.table-bordered.dataTable {
+    border: none;
 }
 
 @media screen and (max-width: 70em) {
-
-    .saving .dataTables_wrapper {
-        padding-left: 5em;
+    .savings-section .col-md-12 {
+        margin-left: 40px;
     }
 
     .savings-section {
         margin: 0 !important;
-    }
-
-    .dataTables_wrapper {
-        padding-right: 0em;
-    }
-
-    .left-arrow {
-        font-size: 1.3rem;
     }
 
     .report-table {
