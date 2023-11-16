@@ -15,18 +15,12 @@ function menuBtnChange() {
     }
 }
 
-window.onload = function () {
-    Array.from(
-        document.getElementsByClassName("report-collapse-trigger")
-    ).forEach(function (item) {
-        item.addEventListener("click", function (e) {
-            var _btn = this;
-            console.log(_btn.parentNode.parentNode.classList.contains("open"));
-            if (_btn.parentNode.parentNode.classList.contains("open")) {
-                _btn.parentNode.parentNode.classList.remove("open");
-            } else {
-                _btn.parentNode.parentNode.classList.add("open");
-            }
-        });
+$(document).ready(function () {
+
+    $('#datatable').dataTable({
+        dom: 'Bfrtip',
+        buttons: [
+            'copy', 'csv', 'excel', 'pdf', 'print'
+        ],
     });
-};
+});

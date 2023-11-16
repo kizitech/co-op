@@ -1,11 +1,19 @@
 .report-table {
-    padding: 0 5em;
     margin: 0 auto 3em;
-    /* display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-    min-height: fit-content; */
+}
+
+.report-table h2 {
+    color: #9E9628;
+    font-weight: 600;
+}
+
+.container {
+    padding-right: 35px !important;
+    padding-left: 35px !important;
+}
+
+.col-md-12 {
+    overflow-x: auto;
 }
 
 table {
@@ -58,8 +66,6 @@ table td {
 }
 
 .dataTables_wrapper .dataTables_info {
-    font-size: 1rem;
-    padding-top: 2.755em !important;
     color: #9E9628 !important;
 }
 
@@ -96,12 +102,31 @@ table td {
     color: #fff !important;
 }
 
+.btn-warning {
+    border-color: rgb(2, 0, 36) !important;
+    background-color: rgb(2, 0, 36)!important;
+}
+
+.btn-warning:hover {
+    opacity: 0.8;
+}
+
 /* Style the ellipsis */
 .ellipsis {
     padding: 0 10px !important;
     font-weight: bold !important;
 }
 
+.dt-buttons, .dataTables_filter {
+    margin-bottom: 1em;
+}
+
+/* .dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+    opacity: 0.6 !important;
+    color: white !important;
+    border: none !important;
+    background: none !important;
+} */
 
 /* Style the label */
 .dataTables_length label {

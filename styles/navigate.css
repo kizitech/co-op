@@ -10,7 +10,7 @@
 
 .left-arrow {
     padding: 0.4em;
-    font-size: 2rem;
+    font-size: 3rem;
     cursor: pointer;
     border-radius: 5em;
     margin: 0.8em 1em 0;
@@ -44,7 +44,6 @@
 
 .next {
     cursor: pointer;
-    font-size: 1rem;
     color: #9E9628;
     text-decoration: underline;
     transition: all 500ms ease;
