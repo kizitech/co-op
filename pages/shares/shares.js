@@ -1,25 +1,21 @@
-new DataTable('#example', {
-    dom: 'Bfrtip',
-    buttons: [
-        'copy', 'csv', 'excel', 'pdf', 'print'
-    ],
+$(document).ready(function () {
 
-    ajax: '/pages/shares/shares.json',
-    columns: [
-        { data: 'name of shareholder' },
-        { data: 'value of holdings' },
-        { data: 'share holdings (units)' },
-        { data: '% of holding' },
-    ],
-    createdRow: function (row, data, dataIndex) {
-        var tdElements = $('td', row);
+    $('#datatable').dataTable({
+        dom: 'Bfrtip',
+        buttons: [
+            'copy', 'csv', 'excel', 'pdf', 'print'
+        ],
 
-        // Loop through the td elements and set the data-label attribute
-        tdElements.each(function (index) {
-            var columnHeaderText = $('#example thead th').eq(index).text();
-            $(this).attr('data-label', columnHeaderText);
-        });
-    }
+        createdRow: function (row, data, dataIndex) {
+            var tdElements = $('td', row);
+
+            tdElements.each(function (index) {
+                var columnHeaderText = $('#datatable thead th').eq(index).text();
+                $(this).attr('data-label', columnHeaderText);
+            });
+        }
+    });
+
 });
 
 
